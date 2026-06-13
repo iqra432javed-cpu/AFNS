@@ -3,13 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Imoria Learning | AFNS Chemistry Preparation</title>
+  
+  <title>Imoria Learning | AFNS Chemistry Preparation Portal</title>
+  <meta name="title" content="Imoria Learning | AFNS Chemistry Preparation Portal">
+  <meta name="description" content="Master your AFNS Chemistry exam with Imoria Learning. Access comprehensive chapter notes, practice interactive MCQs, and take timed full-length mock tests.">
+  <meta name="keywords" content="AFNS, Chemistry Preparation, Nursing Exam, Mock Test, Chemistry MCQs, Chemistry Notes, Imoria Learning">
+  <meta name="author" content="Iqra Javed">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://imorialearning.edu/">
+  <meta property="og:title" content="Imoria Learning | AFNS Chemistry Preparation Portal">
+  <meta property="og:description" content="Master your AFNS Chemistry exam with Imoria Learning. Access comprehensive chapter notes, practice interactive MCQs, and take timed full-length mock tests.">
+  <meta property="og:image" content="assets/images/og-preview.jpg">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://imorialearning.edu/">
+  <meta property="twitter:title" content="Imoria Learning | AFNS Chemistry Preparation Portal">
+  <meta property="twitter:description" content="Master your AFNS Chemistry exam with Imoria Learning. Access comprehensive chapter notes, practice interactive MCQs, and take timed full-length mock tests.">
+  <meta property="twitter:image" content="assets/images/og-preview.jpg">
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="site-header">
     <div class="header-container">
@@ -17,9 +42,9 @@
         <span class="brand-name">Imoria Learning</span>
         <span class="brand-subtitle">AFNS Chemistry Preparation Portal</span>
       </div>
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Main Navigation">
         <ul class="nav-list">
-          <li><a href="index.html" class="nav-link active">Dashboard</a></li>
+          <li><a href="index.html" class="nav-link" aria-current="page">Dashboard</a></li>
           <li><a href="chemistry-notes.html" class="nav-link">Notes</a></li>
           <li><a href="mcqs.html" class="nav-link">MCQs</a></li>
           <li><a href="practice-test.html" class="nav-link">Mock Test</a></li>
@@ -28,10 +53,11 @@
     </div>
   </header>
 
-  <main>
-    <section class="hero">
+  <main id="main-content">
+    
+    <section class="hero" aria-labelledby="hero-title">
       <div class="hero-content">
-        <h1 class="hero-title">AFNS Chemistry Preparation Portal</h1>
+        <h1 id="hero-title" class="hero-title">AFNS Chemistry Preparation Portal</h1>
         <p class="hero-text">
           Build a strong foundation for your AFNS Chemistry exam. Learn key concepts through
           structured notes, sharpen your skills with chapter-wise MCQs, and test your readiness
@@ -41,46 +67,62 @@
       </div>
     </section>
 
-    <section class="dashboard-section">
-      <h2 class="section-heading">Your Study Toolkit</h2>
-      <div class="card-grid">
+    <section class="dashboard-section" aria-labelledby="section-heading">
+      <div class="container">
+        <h2 id="section-heading" class="section-heading">Your Study Toolkit</h2>
+        <div class="card-grid">
 
-        <article class="dashboard-card">
-          <div class="card-icon" aria-hidden="true">📘</div>
-          <h3 class="card-title">Chemistry Study Notes</h3>
-          <p class="card-description">
-            Complete theoretical Chemistry notes covering 13 chapters with organized explanations.
-          </p>
-          <a href="chemistry-notes.html" class="btn btn-card" aria-label="View Chemistry Study Notes">View Notes →</a>
-        </article>
+          <article class="dashboard-card">
+            <div class="card-icon-container" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-svg"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </div>
+            <h3 class="card-title">Chemistry Study Notes</h3>
+            <p class="card-description">
+              Complete theoretical Chemistry notes covering 13 chapters with organized explanations.
+            </p>
+            <a href="chemistry-notes.html" class="btn btn-card" aria-label="View Chemistry Study Notes">
+              View Notes <span aria-hidden="true">&rarr;</span>
+            </a>
+          </article>
 
-        <article class="dashboard-card">
-          <div class="card-icon" aria-hidden="true">📝</div>
-          <h3 class="card-title">Chapter-wise Practice MCQs</h3>
-          <p class="card-description">
-            Practice Chemistry MCQs chapter by chapter and improve exam readiness.
-          </p>
-          <a href="mcqs.html" class="btn btn-card" aria-label="Practice Chapter-wise MCQs">Practice MCQs →</a>
-        </article>
+          <article class="dashboard-card">
+            <div class="card-icon-container" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-svg"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+            </div>
+            <h3 class="card-title">Chapter-wise Practice MCQs</h3>
+            <p class="card-description">
+              Practice Chemistry MCQs chapter by chapter and improve exam readiness.
+            </p>
+            <a href="mcqs.html" class="btn btn-card" aria-label="Practice Chapter-wise MCQs">
+              Practice MCQs <span aria-hidden="true">&rarr;</span>
+            </a>
+          </article>
 
-        <article class="dashboard-card">
-          <div class="card-icon" aria-hidden="true">⏱️</div>
-          <h3 class="card-title">Full Length Mock Test</h3>
-          <p class="card-description">
-            Attempt a realistic AFNS Chemistry mock exam with a 30-minute timer.
-          </p>
-          <a href="practice-test.html" class="btn btn-card" aria-label="Start Full Length Mock Test">Start Test →</a>
-        </article>
+          <article class="dashboard-card">
+            <div class="card-icon-container" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-svg"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3 class="card-title">Full Length Mock Test</h3>
+            <p class="card-description">
+              Attempt a realistic AFNS Chemistry mock exam with a 30-minute timer.
+            </p>
+            <a href="practice-test.html" class="btn btn-card" aria-label="Start Full Length Mock Test">
+              Start Test <span aria-hidden="true">&rarr;</span>
+            </a>
+          </article>
 
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2026 Imoria Learning. All Rights Reserved.</p>
-    <p>Made with ♥ by Iqra Javed</p>
+    <div class="footer-container">
+      <p>&copy; 2026 Imoria Learning. All Rights Reserved.</p>
+      <p>Made with <span role="img" aria-label="love">♥</span> by Iqra Javed</p>
+    </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
 </body>
 </html>
