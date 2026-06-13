@@ -6,53 +6,83 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Imoria Learning | Chemistry MCQs</title>
+
+<title>Imoria Learning | Practice MCQs</title>
+
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
 
 <link rel="stylesheet" href="style.css">
 
+
 </head>
+
 
 
 
 <body>
 
 
+
+
 <header class="site-header">
+
 
 <div class="container nav-container">
 
 
 <a href="index.html" class="brand">
 
-<span class="logo">🩺</span>
 
-<span>
-<strong>Imoria Learning</strong>
-<small>AFNS Chemistry</small>
-</span>
+<div class="logo">
+🩺
+</div>
+
+
+<div>
+
+<strong>
+Imoria Learning
+</strong>
+
+
+<small>
+AFNS Chemistry
+</small>
+
+
+</div>
+
 
 </a>
+
+
 
 
 
 <nav class="main-nav">
 
+
 <a href="index.html">
 Dashboard
 </a>
+
 
 <a href="chemistry-notes.html">
 Study Notes
 </a>
 
-<a href="mcqs.html" class="active">
+
+<a class="active" href="mcqs.html">
 Practice MCQs
 </a>
+
 
 <a href="practice-test.html">
 Mock Test
@@ -62,7 +92,9 @@ Mock Test
 </nav>
 
 
+
 </div>
+
 
 </header>
 
@@ -70,18 +102,36 @@ Mock Test
 
 
 
-<main class="quiz-container container">
 
 
-<div class="notes-header">
+<main class="container quiz-container">
+
+
+
+
+
+
+<div class="hero-card">
+
+
+<span class="badge">
+📝 AFNS Practice Zone
+</span>
+
 
 <h1>
+
 Chapter Wise Chemistry MCQs
+
 </h1>
 
+
 <p>
-AFNS focused practice questions with instant evaluation.
+
+Strengthen concepts with quick evaluation and instant results.
+
 </p>
+
 
 </div>
 
@@ -90,68 +140,116 @@ AFNS focused practice questions with instant evaluation.
 
 
 
+
+
+
+<!-- CHAPTER 1 -->
+
+
 <section class="quiz-card" id="quiz-chapter-1">
 
+
 <h2>
-Chapter 1: Electron, Proton & Neutron
+Chapter 1: Atomic Particles
 </h2>
 
 
 <form data-chapter="1">
 
 
+
 <p>
-1. Electron was discovered by:
+Electron was discovered by:
 </p>
 
 
+
 <label class="option-label">
+
 <input type="radio" name="ch1q1" value="correct">
+
 J.J. Thomson
+
 </label>
 
 
+
+
 <label class="option-label">
+
 <input type="radio" name="ch1q1" value="incorrect">
+
 Rutherford
+
 </label>
+
+
+
 
 
 <label class="option-label">
+
 <input type="radio" name="ch1q1" value="incorrect">
+
 Bohr
+
 </label>
+
+
+
 
 
 
 <p>
-2. Proton has charge:
+Proton has what charge?
 </p>
 
 
+
 <label class="option-label">
+
 <input type="radio" name="ch1q2" value="correct">
+
 Positive
+
 </label>
 
+
+
 <label class="option-label">
+
 <input type="radio" name="ch1q2" value="incorrect">
+
 Negative
+
 </label>
+
+
+
+
 
 <label class="option-label">
+
 <input type="radio" name="ch1q2" value="incorrect">
+
 Neutral
+
 </label>
 
 
 
-<button type="button" onclick="checkChapterQuiz('1')">
-Check Answers
+
+
+<button onclick="checkChapterQuiz('1')" type="button">
+
+Check Chapter
+
 </button>
 
 
+
 <p id="feedback-ch1"></p>
+
 
 
 </form>
@@ -166,72 +264,112 @@ Check Answers
 
 
 
-<section class="quiz-card" id="quiz-chapter-2">
+
+<!-- CHAPTER 2 -->
+
+
+<section class="quiz-card">
 
 
 <h2>
-Chapter 2: Cathode & Canal Rays
+Chapter 2: Cathode Rays
 </h2>
 
 
 <form data-chapter="2">
 
 
+
 <p>
-1. Cathode rays consist of:
+Cathode rays contain:
 </p>
 
 
+
 <label class="option-label">
+
 <input type="radio" name="ch2q1" value="correct">
+
 Electrons
+
 </label>
 
 
+
+
 <label class="option-label">
+
 <input type="radio" name="ch2q1" value="incorrect">
+
 Protons
+
 </label>
+
 
 
 <label class="option-label">
+
 <input type="radio" name="ch2q1" value="incorrect">
+
 Neutrons
+
 </label>
+
+
 
 
 
 <p>
-2. Canal rays were discovered by:
+Canal rays are:
 </p>
 
 
+
 <label class="option-label">
+
 <input type="radio" name="ch2q2" value="correct">
-Goldstein
+
+Positive ions
+
 </label>
 
-<label class="option-label">
-<input type="radio" name="ch2q2" value="incorrect">
-Chadwick
-</label>
 
 
 <label class="option-label">
+
 <input type="radio" name="ch2q2" value="incorrect">
-Dalton
+
+Electrons
+
 </label>
 
 
 
-<button type="button" onclick="checkChapterQuiz('2')">
-Check Answers
+
+
+<label class="option-label">
+
+<input type="radio" name="ch2q2" value="incorrect">
+
+X-rays
+
+</label>
+
+
+
+
+
+<button onclick="checkChapterQuiz('2')" type="button">
+
+Check Chapter
+
 </button>
 
 
 <p id="feedback-ch2"></p>
 
 
+
 </form>
 
 
@@ -245,74 +383,119 @@ Check Answers
 
 
 
-<section class="quiz-card" id="quiz-chapter-3">
+<!-- CHAPTER 3 -->
+
+
+<section class="quiz-card">
 
 
 <h2>
-Chapter 3: Chadwick Experiment
+
+Chapter 3: Neutron Discovery
+
 </h2>
 
 
 <form data-chapter="3">
 
 
+
 <p>
-1. Neutron was discovered by:
+
+Neutron discovered by:
+
 </p>
 
 
+
 <label class="option-label">
+
 <input type="radio" name="ch3q1" value="correct">
+
 James Chadwick
+
 </label>
 
 
+
+
 <label class="option-label">
+
 <input type="radio" name="ch3q1" value="incorrect">
-Moseley
+
+Dalton
+
 </label>
 
 
+
+
 <label class="option-label">
+
 <input type="radio" name="ch3q1" value="incorrect">
+
 Planck
+
 </label>
+
+
+
 
 
 
 <p>
-2. Neutron charge is:
+
+Neutron charge is:
+
 </p>
 
 
+
 <label class="option-label">
+
 <input type="radio" name="ch3q2" value="correct">
+
 Zero
+
 </label>
 
 
+
 <label class="option-label">
+
 <input type="radio" name="ch3q2" value="incorrect">
+
 +1
+
 </label>
+
 
 
 <label class="option-label">
+
 <input type="radio" name="ch3q2" value="incorrect">
+
 -1
+
 </label>
 
 
 
-<button type="button" onclick="checkChapterQuiz('3')">
-Check Answers
+
+<button onclick="checkChapterQuiz('3')" type="button">
+
+Check Chapter
+
 </button>
+
 
 
 <p id="feedback-ch3"></p>
 
 
+
 </form>
+
 
 </section>
 
@@ -323,8 +506,10 @@ Check Answers
 
 
 
+<!-- CHAPTER 4 -->
 
-<section class="quiz-card" id="quiz-chapter-4">
+
+<section class="quiz-card">
 
 
 <h2>
@@ -336,55 +521,89 @@ Chapter 4: Rutherford Model
 
 
 <p>
-1. Gold foil experiment was performed by:
+Gold foil experiment proved:
 </p>
 
 
 <label class="option-label">
+
 <input type="radio" name="ch4q1" value="correct">
-Rutherford
+
+Existence of nucleus
+
 </label>
+
 
 
 <label class="option-label">
+
 <input type="radio" name="ch4q1" value="incorrect">
-Bohr
+
+Quantum theory
+
 </label>
+
+
 
 
 <label class="option-label">
+
 <input type="radio" name="ch4q1" value="incorrect">
-Thomson
+
+Electron spin
+
 </label>
+
+
 
 
 
 <p>
-2. Rutherford model failed to explain:
+Main defect of Rutherford model:
 </p>
 
 
+
 <label class="option-label">
+
 <input type="radio" name="ch4q2" value="correct">
-Atomic stability
+
+Could not explain stability
+
 </label>
+
 
 
 <label class="option-label">
+
 <input type="radio" name="ch4q2" value="incorrect">
-Existence of nucleus
+
+Could not find nucleus
+
 </label>
+
+
+
 
 
 <label class="option-label">
+
 <input type="radio" name="ch4q2" value="incorrect">
-Electron charge
+
+No electrons existed
+
 </label>
 
 
-<button type="button" onclick="checkChapterQuiz('4')">
-Check Answers
+
+
+
+<button onclick="checkChapterQuiz('4')" type="button">
+
+Check Chapter
+
 </button>
+
 
 
 <p id="feedback-ch4"></p>
@@ -396,15 +615,9 @@ Check Answers
 </section>
 
 
+<!-- CHAPTER 5 -->
 
-
-
-
-
-
-
-<section class="quiz-card" id="quiz-chapter-5">
-
+<section class="quiz-card">
 
 <h2>
 Chapter 5: Bohr Theory
@@ -415,7 +628,7 @@ Chapter 5: Bohr Theory
 
 
 <p>
-1. Electrons occupy:
+Electrons move in:
 </p>
 
 
@@ -439,35 +652,34 @@ Nucleus only
 
 
 <p>
-2. Energy is released when electron:
+Energy is emitted when electron:
 </p>
 
 
 <label class="option-label">
 <input type="radio" name="ch5q2" value="correct">
-Moves to lower level
+Moves to lower energy level
 </label>
 
 
 <label class="option-label">
 <input type="radio" name="ch5q2" value="incorrect">
-Moves to higher level
+Moves to higher energy
 </label>
+
 
 
 <label class="option-label">
 <input type="radio" name="ch5q2" value="incorrect">
-Stops moving
+Stops permanently
 </label>
 
 
 <button type="button" onclick="checkChapterQuiz('5')">
-Check Answers
+Check Chapter
 </button>
 
-
 <p id="feedback-ch5"></p>
-
 
 </form>
 
@@ -477,58 +689,65 @@ Check Answers
 
 
 
-<!-- Remaining chapters continue -->
 
-<section class="quiz-card" id="quiz-chapter-6">
+
+
+
+<!-- CHAPTER 6 -->
+
+<section class="quiz-card">
 
 <h2>
 Chapter 6: Planck Quantum Theory
 </h2>
 
+
 <form data-chapter="6">
 
+
 <p>
-1. Energy packets are called:
+Energy packets are called:
 </p>
+
 
 <label class="option-label">
 <input type="radio" name="ch6q1" value="correct">
 Quanta
 </label>
 
-<label class="option-label">
-<input type="radio" name="ch6q1" value="incorrect">
-Orbits
-</label>
 
 <label class="option-label">
 <input type="radio" name="ch6q1" value="incorrect">
-Rays
+Atoms
 </label>
+
+
+<label class="option-label">
+<input type="radio" name="ch6q1" value="incorrect">
+Orbitals
+</label>
+
 
 
 <p>
-2. Energy depends on:
+Energy depends on:
 </p>
+
 
 <label class="option-label">
 <input type="radio" name="ch6q2" value="correct">
 Frequency
 </label>
 
-<label class="option-label">
-<input type="radio" name="ch6q2" value="incorrect">
-Mass only
-</label>
 
 <label class="option-label">
 <input type="radio" name="ch6q2" value="incorrect">
-Volume
+Colour only
 </label>
 
 
-<button type="button" onclick="checkChapterQuiz('6')">
-Check Answers
+<button onclick="checkChapterQuiz('6')" type="button">
+Check Chapter
 </button>
 
 
@@ -538,59 +757,71 @@ Check Answers
 
 </section>
 
+
+
+
+
+
+
+
+
 <!-- CHAPTER 7 -->
 
-<section class="quiz-card" id="quiz-chapter-7">
+<section class="quiz-card">
 
 <h2>
-Chapter 7: X-Rays & Moseley's Law
+Chapter 7: X-Rays & Moseley Law
 </h2>
+
 
 <form data-chapter="7">
 
+
 <p>
-1. X-rays are produced when:
+Moseley's work established:
 </p>
+
 
 <label class="option-label">
 <input type="radio" name="ch7q1" value="correct">
-High speed electrons strike metal
+Atomic number importance
 </label>
+
 
 <label class="option-label">
 <input type="radio" name="ch7q1" value="incorrect">
-Neutrons decay
+Neutron mass
 </label>
+
 
 <label class="option-label">
 <input type="radio" name="ch7q1" value="incorrect">
-Atoms lose protons
+Electron spin
 </label>
+
 
 
 <p>
-2. Moseley's law is related to:
+X-rays are produced by:
 </p>
+
 
 <label class="option-label">
 <input type="radio" name="ch7q2" value="correct">
-Atomic number
+Fast electrons striking metal
 </label>
+
 
 <label class="option-label">
 <input type="radio" name="ch7q2" value="incorrect">
-Mass number
-</label>
-
-<label class="option-label">
-<input type="radio" name="ch7q2" value="incorrect">
-Density
+Neutron collision
 </label>
 
 
-<button type="button" onclick="checkChapterQuiz('7')">
-Check Answers
+<button onclick="checkChapterQuiz('7')" type="button">
+Check Chapter
 </button>
+
 
 <p id="feedback-ch7"></p>
 
@@ -602,30 +833,39 @@ Check Answers
 
 
 
+
+
+
+
 <!-- CHAPTER 8 -->
 
-<section class="quiz-card" id="quiz-chapter-8">
+<section class="quiz-card">
+
 
 <h2>
 Chapter 8: Quantum Numbers
 </h2>
 
+
 <form data-chapter="8">
 
 
 <p>
-1. Principal quantum number represents:
+Principal quantum number represents:
 </p>
+
 
 <label class="option-label">
 <input type="radio" name="ch8q1" value="correct">
 Shell
 </label>
 
+
 <label class="option-label">
 <input type="radio" name="ch8q1" value="incorrect">
 Spin
 </label>
+
 
 <label class="option-label">
 <input type="radio" name="ch8q1" value="incorrect">
@@ -633,35 +873,38 @@ Charge
 </label>
 
 
+
+
 <p>
-2. Spin quantum number describes:
+Spin quantum number shows:
 </p>
+
 
 <label class="option-label">
 <input type="radio" name="ch8q2" value="correct">
-Electron spin direction
+Electron spin
 </label>
+
 
 <label class="option-label">
 <input type="radio" name="ch8q2" value="incorrect">
 Atomic radius
 </label>
 
-<label class="option-label">
-<input type="radio" name="ch8q2" value="incorrect">
-Nuclear size
-</label>
 
 
-<button type="button" onclick="checkChapterQuiz('8')">
-Check Answers
+<button onclick="checkChapterQuiz('8')" type="button">
+Check Chapter
 </button>
+
 
 <p id="feedback-ch8"></p>
 
 </form>
 
+
 </section>
+
 
 
 
@@ -671,57 +914,53 @@ Check Answers
 
 <!-- CHAPTER 9 -->
 
-<section class="quiz-card" id="quiz-chapter-9">
+<section class="quiz-card">
+
 
 <h2>
-Chapter 9: Electronic Configuration Rules
+Chapter 9: Configuration Rules
 </h2>
+
 
 <form data-chapter="9">
 
 
 <p>
-1. Aufbau principle states:
+Aufbau principle means:
 </p>
+
 
 <label class="option-label">
 <input type="radio" name="ch9q1" value="correct">
-Lower energy orbitals fill first
+Low energy orbitals fill first
 </label>
+
 
 <label class="option-label">
 <input type="radio" name="ch9q1" value="incorrect">
-Higher energy fills first
-</label>
-
-<label class="option-label">
-<input type="radio" name="ch9q1" value="incorrect">
-Electrons disappear
+High energy fills first
 </label>
 
 
 <p>
-2. Hund's rule explains:
+Hund's rule explains:
 </p>
+
 
 <label class="option-label">
 <input type="radio" name="ch9q2" value="correct">
-Orbital filling before pairing
+Single filling before pairing
 </label>
+
 
 <label class="option-label">
 <input type="radio" name="ch9q2" value="incorrect">
-Nuclear decay
-</label>
-
-<label class="option-label">
-<input type="radio" name="ch9q2" value="incorrect">
-Proton movement
+Nuclear reaction
 </label>
 
 
-<button type="button" onclick="checkChapterQuiz('9')">
-Check Answers
+<button onclick="checkChapterQuiz('9')" type="button">
+Check Chapter
 </button>
 
 <p id="feedback-ch9"></p>
@@ -730,72 +969,84 @@ Check Answers
 
 </section>
 
-
-
-
-
-
-
 <!-- CHAPTER 10 -->
 
-<section class="quiz-card" id="quiz-chapter-10">
+<section class="quiz-card">
 
 <h2>
-Chapter 10: Periodic Table & Shielding Effect
+Chapter 10: Modern Periodic Table
 </h2>
+
 
 <form data-chapter="10">
 
 
 <p>
-1. Modern periodic table is arranged by:
+Modern periodic table is arranged by:
 </p>
 
+
 <label class="option-label">
+
 <input type="radio" name="ch10q1" value="correct">
+
 Atomic number
+
 </label>
 
+
+
 <label class="option-label">
+
 <input type="radio" name="ch10q1" value="incorrect">
+
 Atomic mass only
+
 </label>
 
-<label class="option-label">
-<input type="radio" name="ch10q1" value="incorrect">
-Density
-</label>
+
+
 
 
 <p>
-2. Shielding effect reduces:
+Shielding effect decreases:
 </p>
 
+
 <label class="option-label">
+
 <input type="radio" name="ch10q2" value="correct">
+
 Nuclear attraction
+
 </label>
 
+
 <label class="option-label">
+
 <input type="radio" name="ch10q2" value="incorrect">
+
 Electron charge
-</label>
 
-<label class="option-label">
-<input type="radio" name="ch10q2" value="incorrect">
-Atomic number
 </label>
 
 
-<button type="button" onclick="checkChapterQuiz('10')">
-Check Answers
+
+<button onclick="checkChapterQuiz('10')" type="button">
+
+Check Chapter
+
 </button>
 
+
 <p id="feedback-ch10"></p>
+
 
 </form>
 
 </section>
+
+
 
 
 
@@ -805,64 +1056,85 @@ Check Answers
 
 <!-- CHAPTER 11 -->
 
-<section class="quiz-card" id="quiz-chapter-11">
+<section class="quiz-card">
+
 
 <h2>
-Chapter 11: Ionization Energy & Electron Affinity
+Chapter 11: Ionization Energy
 </h2>
+
+
 
 <form data-chapter="11">
 
 
 <p>
-1. Ionization energy is energy required to:
+Ionization energy removes:
 </p>
 
+
 <label class="option-label">
+
 <input type="radio" name="ch11q1" value="correct">
-Remove an electron
+
+Electron
+
 </label>
 
-<label class="option-label">
-<input type="radio" name="ch11q1" value="incorrect">
-Add proton
-</label>
+
 
 <label class="option-label">
+
 <input type="radio" name="ch11q1" value="incorrect">
-Remove neutron
+
+Neutron
+
 </label>
+
+
 
 
 <p>
-2. Ionization energy generally increases:
+Ionization energy generally increases:
 </p>
 
+
 <label class="option-label">
+
 <input type="radio" name="ch11q2" value="correct">
-Across a period
+
+Across period
+
 </label>
+
+
 
 <label class="option-label">
+
 <input type="radio" name="ch11q2" value="incorrect">
-Down a group
+
+Down group
+
 </label>
 
-<label class="option-label">
-<input type="radio" name="ch11q2" value="incorrect">
-Randomly
-</label>
 
 
-<button type="button" onclick="checkChapterQuiz('11')">
-Check Answers
+<button onclick="checkChapterQuiz('11')" type="button">
+
+Check Chapter
+
 </button>
+
 
 <p id="feedback-ch11"></p>
 
+
 </form>
 
+
 </section>
+
+
 
 
 
@@ -872,62 +1144,81 @@ Check Answers
 
 <!-- CHAPTER 12 -->
 
-<section class="quiz-card" id="quiz-chapter-12">
+<section class="quiz-card">
+
 
 <h2>
-Chapter 12: Electronegativity & Metallic Character
+Chapter 12: Electronegativity
 </h2>
+
+
 
 <form data-chapter="12">
 
 
+
 <p>
-1. Electronegativity measures:
+Electronegativity is attraction for:
 </p>
 
+
 <label class="option-label">
+
 <input type="radio" name="ch12q1" value="correct">
-Attraction for bonding electrons
+
+Bonding electrons
+
 </label>
 
-<label class="option-label">
-<input type="radio" name="ch12q1" value="incorrect">
-Number of neutrons
-</label>
 
 <label class="option-label">
+
 <input type="radio" name="ch12q1" value="incorrect">
-Atomic weight
+
+Neutrons
+
 </label>
+
+
+
 
 
 <p>
-2. Metallic character increases:
+Metallic character increases:
 </p>
 
+
 <label class="option-label">
+
 <input type="radio" name="ch12q2" value="correct">
+
 Down group
+
 </label>
 
+
 <label class="option-label">
+
 <input type="radio" name="ch12q2" value="incorrect">
+
 Across period
-</label>
 
-<label class="option-label">
-<input type="radio" name="ch12q2" value="incorrect">
-No trend
 </label>
 
 
-<button type="button" onclick="checkChapterQuiz('12')">
-Check Answers
+
+<button onclick="checkChapterQuiz('12')" type="button">
+
+Check Chapter
+
 </button>
+
 
 <p id="feedback-ch12"></p>
 
+
 </form>
+
 
 </section>
 
@@ -937,62 +1228,81 @@ Check Answers
 
 
 
+
+
 <!-- CHAPTER 13 -->
 
-<section class="quiz-card" id="quiz-chapter-13">
+
+<section class="quiz-card">
+
 
 <h2>
-Chapter 13: Atomic Radius & Ionic Radius
+Chapter 13: Atomic Radius
 </h2>
+
+
 
 <form data-chapter="13">
 
 
 <p>
-1. Atomic radius decreases across a period because:
+Atomic radius decreases across period because:
 </p>
 
+
 <label class="option-label">
+
 <input type="radio" name="ch13q1" value="correct">
+
 Nuclear attraction increases
+
 </label>
 
-<label class="option-label">
-<input type="radio" name="ch13q1" value="incorrect">
-Electrons vanish
-</label>
+
 
 <label class="option-label">
+
 <input type="radio" name="ch13q1" value="incorrect">
-Mass decreases
+
+Electrons disappear
+
 </label>
+
+
 
 
 <p>
-2. Cations are generally:
+Cations are:
 </p>
 
+
 <label class="option-label">
+
 <input type="radio" name="ch13q2" value="correct">
+
 Smaller than atoms
+
 </label>
 
+
+
 <label class="option-label">
+
 <input type="radio" name="ch13q2" value="incorrect">
+
 Always larger
-</label>
 
-<label class="option-label">
-<input type="radio" name="ch13q2" value="incorrect">
-Equal size
 </label>
 
 
-<button type="button" onclick="checkChapterQuiz('13')">
 
-Check Answers
+
+<button onclick="checkChapterQuiz('13')" type="button">
+
+Check Chapter
 
 </button>
+
 
 
 <p id="feedback-ch13"></p>
@@ -1007,7 +1317,13 @@ Check Answers
 
 
 
+
+
+
 </main>
+
+
+
 
 
 
@@ -1015,16 +1331,25 @@ Check Answers
 
 <footer class="site-footer">
 
+
 <div class="container">
 
+
 <p>
+
 © 2026 Imoria Learning. All Rights Reserved.
 Made with ♥ by Iqra Javed
+
 </p>
+
 
 </div>
 
+
 </footer>
+
+
+
 
 
 
@@ -1032,4 +1357,5 @@ Made with ♥ by Iqra Javed
 
 
 </body>
-</html>
+
+</html>  
