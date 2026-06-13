@@ -1,101 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Imoria Learning - AFNS Chemistry Preparation</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imoria Learning | AFNS Chemistry Preparation Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="header-container">
-            <div class="brand">
-                <span class="brand-logo">🩺</span>
-                <span class="brand-name">Imoria Learning</span>
-            </div>
-            <nav class="main-navigation">
-                <ul>
-                    <li><a href="index.html" class="nav-link active">Dashboard</a></li>
-                    <li><a href="chemistry-notes.html" class="nav-link">Study Notes</a></li>
-                    <li><a href="mcqs.html" class="nav-link">Practice MCQs</a></li>
-                    <li><a href="practice-test.html" class="nav-link">Mock Test</a></li>
-                </ul>
-            </nav>
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">Imoria <span>Learning</span></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Dashboard</a></li>
+          <li><a href="chemistry-notes.html">Study Notes</a></li>
+          <li><a href="mcqs.html">Practice MCQs</a></li>
+          <li><a href="practice-test.html">Mock Test</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero-content">
+        <h1>AFNS Chemistry Preparation Portal</h1>
+        <p>Your complete companion for mastering Chemistry concepts, practicing chapter-wise MCQs, and acing the AFNS entrance exam with full-length mock tests.</p>
+      </div>
+    </section>
+
+    <section class="dashboard-grid">
+      <div class="container">
+        <h2 class="section-title">Start Your Preparation</h2>
+        <div class="cards-grid">
+
+          <article class="card">
+            <div class="card-icon notes-icon">📘</div>
+            <h3>Chemistry Study Notes</h3>
+            <p>Comprehensive theoretical material covering all 13 chapters, simplified for quick revision and conceptual clarity.</p>
+            <a href="chemistry-notes.html" class="card-btn">Read Notes</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon mcq-icon">📝</div>
+            <h3>Chapter-wise Practice MCQs</h3>
+            <p>Test your understanding with targeted multiple-choice questions organized by chapter, complete with instant feedback.</p>
+            <a href="mcqs.html" class="card-btn">Practice Now</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon test-icon">⏱️</div>
+            <h3>Full Length Mock Test</h3>
+            <p>Simulate the real exam experience with a timed 30-minute mock test covering the entire syllabus.</p>
+            <a href="practice-test.html" class="card-btn">Take Test</a>
+          </article>
+
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main class="dashboard-container">
-        
-        <section class="hero-section">
-            <div class="hero-content">
-                <span class="badge">AFNS Academic Prep</span>
-                <h1>AFNS Chemistry Preparation Portal</h1>
-                <p>Master the Armed Forces Nursing Services chemistry syllabus with high-yield study materials, chapter-specific practice questions, and real-time exam simulations.</p>
-            </div>
-        </section>
+  </main>
 
-        <section class="modules-section">
-            <h2 class="section-title">Select a Learning Module</h2>
-            <div class="cards-grid">
-                
-                <article class="dashboard-card">
-                    <div class="card-icon-wrapper blue-bg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                    </div>
-                    <div class="card-body">
-                        <h3>Chemistry Study Notes</h3>
-                        <p>Access structured theoretical materials covering all 13 core chapters, explicitly tailored to meet AFNS competitive standards.</p>
-                        <span class="card-meta">13 Chapters Available</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="chemistry-notes.html" class="btn btn-primary">Review Notes &rarr;</a>
-                    </div>
-                </article>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Imoria Learning. All Rights Reserved.</p>
+      <p>Made with ♥ by Iqra Javed</p>
+    </div>
+  </footer>
 
-                <article class="dashboard-card">
-                    <div class="card-icon-wrapper teal-bg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-                    </div>
-                    <div class="card-body">
-                        <h3>Chapter-wise Practice MCQs</h3>
-                        <p>Test your knowledge with targeted multiple-choice questions per chapter to reinforce key concepts and evaluate your weak areas.</p>
-                        <span class="card-meta">Instant Detailed Feedback</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="mcqs.html" class="btn btn-primary">Start Practice &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="dashboard-card">
-                    <div class="card-icon-wrapper amber-bg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                    </div>
-                    <div class="card-body">
-                        <h3>Full Length Mock Test</h3>
-                        <p>Simulate the actual examination environment with a comprehensive chemistry test bound to a strict institutional time frame.</p>
-                        <span class="card-meta">30-Minute Live Timer</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="practice-test.html" class="btn btn-accent">Launch Exam &rarr;</a>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="site-footer">
-        <div class="footer-container">
-            <p class="copyright">&copy; 2026 Imoria Learning. All Rights Reserved.</p>
-            <p class="signature">Made with <span class="heart">♥</span> by Iqra Javed</p>
-        </div>
-    </footer>
-
-    <script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
