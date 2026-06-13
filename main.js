@@ -1,149 +1,191 @@
 
+
 /* =====================================================
    IMORIA LEARNING
-   Interactive Portal Logic
+   AFNS Chemistry Portal Logic
 ===================================================== */
 
 
 
-// =================================
+// ================================
 // CHAPTER QUIZ CHECKER
-// =================================
+// ================================
 
 
 function checkChapterQuiz(chapterNum){
 
 
-    const form =
-    document.querySelector(
-        `form[data-chapter="${chapterNum}"]`
-    );
 
+const form =
+document.querySelector(
+`form[data-chapter="${chapterNum}"]`
+);
 
-    if(!form) return;
 
 
+if(!form) return;
 
-    const questions =
-    [...new Set(
-        [...form.querySelectorAll("input")]
-        .map(i=>i.name)
-    )];
 
 
 
-    let score = 0;
+const questions =
+[
+...new Set(
+[...form.querySelectorAll("input")]
+.map(input=>input.name)
+)
+];
 
-    let attempted = 0;
 
 
 
 
-    questions.forEach(question=>{
+let score = 0;
 
+let attempted = 0;
 
-        const answer =
-        form.querySelector(
-            `input[name="${question}"]:checked`
-        );
 
 
-        if(answer){
 
 
-            attempted++;
+questions.forEach(question=>{
 
 
-            if(answer.value==="correct"){
+const selected =
+form.querySelector(
+`input[name="${question}"]:checked`
+);
 
-                score++;
 
-            }
 
+if(selected){
 
-        }
 
+attempted++;
 
-    });
 
 
+if(selected.value==="correct"){
 
+score++;
 
+}
 
-    const feedback =
-    document.getElementById(
-        `feedback-ch${chapterNum}`
-    );
 
 
+}
 
 
-    if(!feedback) return;
 
+});
 
 
 
-    if(attempted < questions.length){
 
 
-        feedback.className="error";
 
 
-        feedback.innerHTML =
-        `
-        ⚠ Please answer all questions.
-        (${attempted}/${questions.length})
-        `;
+const feedback =
+document.getElementById(
+`feedback-ch${chapterNum}`
+);
 
 
-        return;
 
-    }
 
 
+if(!feedback) return;
 
 
 
 
-    const percent =
-    Math.round(
-        score / questions.length * 100
-    );
 
 
+if(attempted < questions.length){
 
 
 
-    if(percent >= 50){
+feedback.className="error";
 
 
-        feedback.className="success";
+feedback.innerHTML =
+`
+⚠ Complete all questions first.
+<br>
+Attempted ${attempted}/${questions.length}
+`;
 
 
-        feedback.innerHTML =
-        `
-        🎉 Excellent!
-        Score ${score}/${questions.length}
-        (${percent}%)
-        `;
 
+return;
 
-    }
 
-    else {
 
+}
 
-        feedback.className="error";
 
 
-        feedback.innerHTML =
-        `
-        📚 Revision Needed.
-        Score ${score}/${questions.length}
-        (${percent}%)
-        `;
 
-    }
+
+
+
+let percent =
+Math.round(
+(score/questions.length)*100
+);
+
+
+
+
+
+
+if(percent >= 50){
+
+
+feedback.className="success";
+
+
+feedback.innerHTML =
+`
+🎉 Passed Chapter Quiz
+
+<br>
+
+Score:
+${score}/${questions.length}
+
+<br>
+
+${percent}%
+
+`;
+
+
+
+}
+
+else{
+
+
+feedback.className="error";
+
+
+feedback.innerHTML =
+`
+📚 Need Revision
+
+<br>
+
+Score:
+${score}/${questions.length}
+
+<br>
+
+${percent}%
+
+`;
+
+}
 
 
 
@@ -156,9 +198,11 @@ function checkChapterQuiz(chapterNum){
 
 
 
-// =================================
-// GRAND TEST TIMER
-// =================================
+
+// ================================
+// MOCK TIMER
+// ================================
+
 
 
 let examTimer;
@@ -172,68 +216,83 @@ let totalSeconds =
 
 
 
+
 function startTimer(){
 
 
 
-    const timer =
-    document.getElementById(
-        "mock-timer"
-    );
+const timer =
+document.getElementById(
+"mock-timer"
+);
 
 
 
-    if(!timer) return;
-
-
-
-
-
-    examTimer =
-    setInterval(()=>{
-
-
-
-        let minutes =
-        Math.floor(
-            totalSeconds / 60
-        );
-
-
-
-        let seconds =
-        totalSeconds % 60;
+if(!timer) return;
 
 
 
 
 
-        timer.textContent =
-        `${String(minutes).padStart(2,"0")}:${String(seconds).padStart(2,"0")}`;
+examTimer =
+setInterval(()=>{
+
+
+
+
+
+let minutes =
+Math.floor(
+totalSeconds/60
+);
+
+
+
+let seconds =
+totalSeconds % 60;
+
+
+
+
+
+timer.textContent =
+
+`${String(minutes).padStart(2,"0")}:
+${String(seconds).padStart(2,"0")}`;
 
 
 
 
 
 
-        if(totalSeconds <= 0){
 
 
-            clearInterval(examTimer);
-
-
-            submitGrandTest();
-
-
-        }
+if(totalSeconds <= 0){
 
 
 
-        totalSeconds--;
+clearInterval(examTimer);
 
 
 
-    },1000);
+submitGrandTest();
+
+
+return;
+
+
+}
+
+
+
+
+totalSeconds--;
+
+
+
+
+},1000);
+
 
 
 
@@ -247,11 +306,9 @@ function startTimer(){
 
 
 
-
-
-// =================================
-// GRAND EXAM SUBMIT
-// =================================
+// ================================
+// GRAND MOCK SUBMISSION
+// ================================
 
 
 
@@ -259,197 +316,227 @@ function submitGrandTest(){
 
 
 
-    const form =
-    document.getElementById(
-        "grand-mock-test"
-    );
+const form =
+document.getElementById(
+"grand-mock-test"
+);
 
 
 
-    if(!form) return;
+if(!form) return;
 
 
 
 
 
-    clearInterval(examTimer);
+clearInterval(examTimer);
 
 
 
 
 
-    let score = 0;
 
-    let attempted = 0;
 
+let score = 0;
 
 
+let attempted = 0;
 
 
-    const answers =
-    form.querySelectorAll(
-        "input:checked"
-    );
 
 
 
+const answers =
+form.querySelectorAll(
+"input:checked"
+);
 
 
-    answers.forEach(answer=>{
 
 
-        attempted++;
 
+answers.forEach(answer=>{
 
-        if(answer.value==="correct"){
 
 
-            score++;
+attempted++;
 
 
-        }
 
+if(answer.value==="correct"){
 
 
-    });
+score++;
 
 
+}
 
 
 
+});
 
 
-    const total = 15;
 
 
 
-    const percentage =
-    Math.round(
-        score / total * 100
-    );
 
 
 
+const totalQuestions = 50;
 
 
 
-    const result =
-    document.getElementById(
-        "test-results-box"
-    );
 
 
+const percentage =
 
+Math.round(
+(score/totalQuestions)*100
+);
 
 
-    if(!result) return;
 
 
 
 
 
+const resultBox =
+document.getElementById(
+"test-results-box"
+);
 
-    let badge;
 
 
 
-    if(percentage >= 50){
 
+if(!resultBox) return;
 
-        badge =
-        `
-        <h1 class="success">
-        PASS 🎉
-        </h1>
 
-        `;
 
 
-    }
 
-    else {
 
 
-        badge =
-        `
-        <h1 class="error">
-        RETAIN 📖
-        </h1>
 
-        `;
+let status;
 
-    }
 
 
 
 
+if(percentage >= 50){
 
 
 
-    result.innerHTML =
+status =
+`
+<h1 class="success">
+PASS 🎉
+</h1>
 
-    `
+<p>
+Excellent AFNS preparation level.
+</p>
 
-    ${badge}
+`;
 
-    <h2>
-    Your Result
-    </h2>
 
 
-    <p>
+}
 
-    Score:
-    <strong>
-    ${score}/${total}
-    </strong>
+else{
 
-    </p>
 
+status =
+`
+<h1 class="error">
+RETAIN 📖
+</h1>
 
+<p>
+Revise weak chapters and try again.
+</p>
 
-    <p>
+`;
 
-    Percentage:
-    <strong>
-    ${percentage}%
-    </strong>
 
-    </p>
 
+}
 
 
-    <p>
 
-    Attempted:
-    ${attempted}/${total}
 
-    </p>
 
 
-    `;
 
+resultBox.innerHTML =
 
+`
 
+${status}
 
 
+<h2>
+Grand Test Result
+</h2>
 
-    result.classList.remove(
-        "hidden"
-    );
 
+<p>
 
+Score:
+<strong>
+${score}/${totalQuestions}
+</strong>
 
+</p>
 
 
 
-    window.scrollTo({
+<p>
 
-        top:0,
+Percentage:
 
-        behavior:"smooth"
+<strong>
+${percentage}%
+</strong>
 
-    });
+</p>
+
+
+
+
+<p>
+
+Attempted:
+${attempted}/${totalQuestions}
+
+</p>
+
+
+`;
+
+
+
+
+
+
+resultBox.classList.remove(
+"hidden"
+);
+
+
+
+
+
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
 
 
 
@@ -463,9 +550,10 @@ function submitGrandTest(){
 
 
 
-// =================================
-// PAGE START
-// =================================
+// ================================
+// PAGE LOAD
+// ================================
+
 
 
 document.addEventListener(
@@ -473,7 +561,8 @@ document.addEventListener(
 ()=>{
 
 
-    startTimer();
+startTimer();
+
 
 
 });
