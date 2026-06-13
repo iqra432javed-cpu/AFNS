@@ -3,73 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Imoria Learning | AFNS Chemistry Preparation Portal</title>
+  <title>Imoria Learning | AFNS Chemistry Preparation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="site-header">
-    <div class="container header-container">
-      <a href="index.html" class="logo">Imoria <span>Learning</span></a>
+    <div class="header-container">
+      <div class="brand">
+        <span class="brand-name">Imoria Learning</span>
+        <span class="brand-subtitle">AFNS Chemistry Preparation Portal</span>
+      </div>
       <nav class="main-nav">
-        <ul>
-          <li><a href="index.html" class="active">Dashboard</a></li>
-          <li><a href="chemistry-notes.html">Study Notes</a></li>
-          <li><a href="mcqs.html">Practice MCQs</a></li>
-          <li><a href="practice-test.html">Mock Test</a></li>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Dashboard</a></li>
+          <li><a href="chemistry-notes.html" class="nav-link">Notes</a></li>
+          <li><a href="mcqs.html" class="nav-link">MCQs</a></li>
+          <li><a href="practice-test.html" class="nav-link">Mock Test</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-
     <section class="hero">
-      <div class="container hero-content">
-        <h1>AFNS Chemistry Preparation Portal</h1>
-        <p>Your complete companion for mastering Chemistry concepts, practicing chapter-wise MCQs, and acing the AFNS entrance exam with full-length mock tests.</p>
+      <div class="hero-content">
+        <h1 class="hero-title">AFNS Chemistry Preparation Portal</h1>
+        <p class="hero-text">
+          Build a strong foundation for your AFNS Chemistry exam. Learn key concepts through
+          structured notes, sharpen your skills with chapter-wise MCQs, and test your readiness
+          with timed mock examinations — all in one place.
+        </p>
+        <a href="chemistry-notes.html" class="btn btn-primary">Start Learning</a>
       </div>
     </section>
 
-    <section class="dashboard-grid">
-      <div class="container">
-        <h2 class="section-title">Start Your Preparation</h2>
-        <div class="cards-grid">
+    <section class="dashboard-section">
+      <h2 class="section-heading">Your Study Toolkit</h2>
+      <div class="card-grid">
 
-          <article class="card">
-            <div class="card-icon notes-icon">📘</div>
-            <h3>Chemistry Study Notes</h3>
-            <p>Comprehensive theoretical material covering all 13 chapters, simplified for quick revision and conceptual clarity.</p>
-            <a href="chemistry-notes.html" class="card-btn">Read Notes</a>
-          </article>
+        <article class="dashboard-card">
+          <div class="card-icon" aria-hidden="true">📘</div>
+          <h3 class="card-title">Chemistry Study Notes</h3>
+          <p class="card-description">
+            Complete theoretical Chemistry notes covering 13 chapters with organized explanations.
+          </p>
+          <a href="chemistry-notes.html" class="btn btn-card" aria-label="View Chemistry Study Notes">View Notes →</a>
+        </article>
 
-          <article class="card">
-            <div class="card-icon mcq-icon">📝</div>
-            <h3>Chapter-wise Practice MCQs</h3>
-            <p>Test your understanding with targeted multiple-choice questions organized by chapter, complete with instant feedback.</p>
-            <a href="mcqs.html" class="card-btn">Practice Now</a>
-          </article>
+        <article class="dashboard-card">
+          <div class="card-icon" aria-hidden="true">📝</div>
+          <h3 class="card-title">Chapter-wise Practice MCQs</h3>
+          <p class="card-description">
+            Practice Chemistry MCQs chapter by chapter and improve exam readiness.
+          </p>
+          <a href="mcqs.html" class="btn btn-card" aria-label="Practice Chapter-wise MCQs">Practice MCQs →</a>
+        </article>
 
-          <article class="card">
-            <div class="card-icon test-icon">⏱️</div>
-            <h3>Full Length Mock Test</h3>
-            <p>Simulate the real exam experience with a timed 30-minute mock test covering the entire syllabus.</p>
-            <a href="practice-test.html" class="card-btn">Take Test</a>
-          </article>
+        <article class="dashboard-card">
+          <div class="card-icon" aria-hidden="true">⏱️</div>
+          <h3 class="card-title">Full Length Mock Test</h3>
+          <p class="card-description">
+            Attempt a realistic AFNS Chemistry mock exam with a 30-minute timer.
+          </p>
+          <a href="practice-test.html" class="btn btn-card" aria-label="Start Full Length Mock Test">Start Test →</a>
+        </article>
 
-        </div>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-content">
-      <p>&copy; 2026 Imoria Learning. All Rights Reserved.</p>
-      <p>Made with ♥ by Iqra Javed</p>
-    </div>
+    <p>&copy; 2026 Imoria Learning. All Rights Reserved.</p>
+    <p>Made with ♥ by Iqra Javed</p>
   </footer>
 
   <script src="main.js"></script>
