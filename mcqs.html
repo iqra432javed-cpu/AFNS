@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice MCQs | Imoria Learning - AFNS Chemistry Preparation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <div class="brand">
+                <span class="brand-logo">🩺</span>
+                <span class="brand-name">Imoria Learning</span>
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Dashboard</a></li>
+                    <li><a href="chemistry-notes.html" class="nav-link">Study Notes</a></li>
+                    <li><a href="mcqs.html" class="nav-link active">Practice MCQs</a></li>
+                    <li><a href="practice-test.html" class="nav-link">Mock Test</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="quiz-portal-container">
+        
+        <div class="quiz-page-header">
+            <h1>Chapter-wise Practice Quizzes</h1>
+            <p>Test your knowledge with entry-test level questions targeted for Armed Forces Nursing Services exam criteria.</p>
+        </div>
+
+        <section class="quiz-card" id="quiz-chapter-1">
+            <h3>Chapter 1: Discovery of Electron, Proton and Neutron</h3>
+            <form data-chapter="1">
+                <div class="question-group">
+                    <p class="question-text">1. Who accurately measured the specific charge ratio (e/m) of an electron for the first time?</p>
+                    <label class="option-label"><input type="radio" name="ch1q1" value="incorrect"> E. Goldstein</label>
+                    <label class="option-label"><input type="radio" name="ch1q1" value="correct"> J.J. Thomson</label>
+                    <label class="option-label"><input type="radio" name="ch1q1" value="incorrect"> James Chadwick</label>
+                    <label class="option-label"><input type="radio" name="ch1q1" value="incorrect"> G. Johnstone Stoney</label>
+                </div>
+                <div class="question-group">
+                    <p class="question-text">2. What is the approximate rest mass of a single electron when expressed in atomic mass units (amu)?</p>
+                    <label class="option-label"><input type="radio" name="ch1q2" value="incorrect"> 1.007276 amu</label>
+                    <label class="option-label"><input type="radio" name="ch1q2" value="incorrect"> 1.008665 amu</label>
+                    <label class="option-label"><input type="radio" name="ch1q2" value="correct"> 0.000548 amu</label>
+                    <label class="option-label"><input type="radio" name="ch1q2" value="incorrect"> 0.107311 amu</label>
+                </div>
+                <div class="quiz-actions">
+                    <button type="button" class="btn btn-check" onclick="checkChapterQuiz('1')">Check Answers</button>
+                    <p class="quiz-feedback" id="feedback-ch1"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="quiz-card" id="quiz-chapter-2">
+            <h3>Chapter 2: Cathode Rays & Canal Rays Properties</h3>
+            <form data-chapter="2">
+                <div class="question-group">
+                    <p class="question-text">1. The charge-to-mass (e/m) ratio of canal rays (positive rays) reaches its maximum value when which gas is inside the discharge tube?</p>
+                    <label class="option-label"><input type="radio" name="ch2q1" value="correct"> Hydrogen</label>
+                    <label class="option-label"><input type="radio" name="ch2q1" value="incorrect"> Helium</label>
+                    <label class="option-label"><input type="radio" name="ch2q1" value="incorrect"> Nitrogen</label>
+                    <label class="option-label"><input type="radio" name="ch2q1" value="incorrect"> Oxygen</label>
+                </div>
+                <div class="question-group">
+                    <p class="question-text">2. The mechanical rotation of a small pinwheel placed in the path of cathode rays directly demonstrates that they possess:</p>
+                    <label class="option-label"><input type="radio" name="ch2q2" value="incorrect"> Pure electrostatic energy</label>
+                    <label class="option-label"><input type="radio" name="ch2q2" value="correct"> Linear momentum and mass</label>
+                    <label class="option-label"><input type="radio" name="ch2q2" value="incorrect"> Wave-like characteristics only</label>
+                    <label class="option-label"><input type="radio" name="ch2q2" value="incorrect"> X-ray configurations</label>
+                </div>
+                <div class="quiz-actions">
+                    <button type="button" class="btn btn-check" onclick="checkChapterQuiz('2')">Check Answers</button>
+                    <p class="quiz-feedback" id="feedback-ch2"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="quiz-card" id="quiz-chapter-3">
+            <h3>Chapter 3: Discovery of Neutron (Chadwick's Experiment)</h3>
+            <form data-chapter="3">
+                <div class="question-group">
+                    <p class="question-text">1. Which light element target did James Chadwick bombard with alpha particles to discover the neutron in 1932?</p>
+                    <label class="option-label"><input type="radio" name="ch3q1" value="incorrect"> Boron</label>
+                    <label class="option-label"><input type="radio" name="ch3q1" value="correct"> Beryllium</label>
+                    <label class="option-label"><input type="radio" name="ch3q1" value="incorrect"> Lithium</label>
+                    <label class="option-label"><input type="radio" name="ch3q1" value="incorrect"> Carbon</label>
+                </div>
+                <div class="question-group">
+                    <p class="question-text">2. Outside an atomic nucleus, a free unstable neutron spontaneously decays into a proton, an electron, and which of the following?</p>
+                    <label class="option-label"><input type="radio" name="ch3q2" value="incorrect"> Alpha particle</label>
+                    <label class="option-label"><input type="radio" name="ch3q2" value="correct"> Antineutrino</label>
+                    <label class="option-label"><input type="radio" name="ch3q2" value="incorrect"> Positron</label>
+                    <label class="option-label"><input type="radio" name="ch3q2" value="incorrect"> Gamma photon</label>
+                </div>
+                <div class="quiz-actions">
+                    <button type="button" class="btn btn-check" onclick="checkChapterQuiz('3')">Check Answers</button>
+                    <p class="quiz-feedback" id="feedback-ch3"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="quiz-card" id="quiz-chapter-4">
+            <h3>Chapter 4: Rutherford's Atomic Model & Defects</h3>
+            <form data-chapter="4">
+                <div class="question-group">
+                    <p class="question-text">1. What was the exact thickness of the gold foil used by Rutherford during his alpha particle scattering experiments?</p>
+                    <label class="option-label"><input type="radio" name="ch4q1" value="correct"> 4 &times; 10^-5 cm</label>
+                    <label class="option-label"><input type="radio" name="ch4q1" value="incorrect"> 4 &times; 10^-7 cm</label>
+                    <label class="option-label"><input type="radio" name="ch4q1" value="incorrect"> 1 &times; 10^-3 cm</label>
+                    <label class="option-label"><input type="radio" name="ch4q1" value="incorrect"> 2 &times; 10^-4 cm</label>
+                </div>
+                <div class="question-group">
+                    <p class="question-text">2. According to classical physics laws, Rutherford's planetary atomic model was defective because an accelerating electron should:</p>
+                    <label class="option-label"><input type="radio" name="ch4q2" value="incorrect"> Absorb discrete energy steps</label>
+                    <label class="option-label"><input type="radio" name="ch4q2" value="correct"> Continuously radiate energy and spiral into the nucleus</label>
+                    <label class="option-label"><input type="radio" name="ch4q2" value="incorrect"> Convert into a high-yield neutron</label>
+                    <label class="option-label"><input type="radio" name="ch4q2" value="incorrect"> Expand its orbit infinitely</label>
+                </div>
+                <div class="quiz-actions">
+                    <button type="button" class="btn btn-check" onclick="checkChapterQuiz('4')">Check Answers</button>
+                    <p class="quiz-feedback" id="feedback-ch4"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="quiz-card" id="quiz-chapter-5">
+            <h3>Chapter 5: Bohr's Atomic Theory & Postulates</h3>
+            <form data-chapter="5">
+                <div class="question-group">
+                    <p class="question-text">1. According to Bohr's postulates, the orbital angular momentum of an electron is quantized as an integral multiple of:</p>
+                    <label class="option-label"><input type="radio" name="ch5q1" value="incorrect"> h / &pi;</label>
+                    <label class="option-label"><input type="radio" name="ch5q1" value="correct"> h / 2&pi;</label>
+                    <label class="option-label"><input type="radio" name="ch5q1" value="incorrect"> 2h / &pi;</label>
+                    <label class="option-label"><input type="radio" name="ch5q1" value="incorrect"> h^2 / 2&pi;</label>
+                </div>
+                <div class="question-group">
+                    <p class="question-text">2. What is the precise ground state energy value ($n=1$) for an electron in a hydrogen atom?</p>
+                    <label class="option-label"><input type="radio" name="ch5q2" value="correct"> -13.6 eV</label>
+                    <label class="option-label"><input type="radio" name="ch5q2" value="incorrect"> -3.4 eV</label>
+                    <label class="option-label"><input type="radio" name="ch5q2" value="incorrect"> +13.6 eV</label>
+                    <label class="option-label"><input type="radio" name="ch5q2" value="incorrect"> -1.51 eV</label>
+                </div>
+                <div class="quiz-actions">
+                    <button type="button" class="btn btn-check" onclick="checkChapterQuiz('5')">Check Answers</button>
+                    <p class="quiz-feedback" id="feedback-ch5"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="quiz-card" id="quiz-chapter-6">
+            <h3>Chapter 6: Planck's Quantum Theory</h3>
+            <form data-chapter="6">
+                <div class="question-group">
+                    <p class="question-text">1. According to Planck's Quantum Theory, the energy carried by a single localized quantum packet of light is:</p>
+                    <label class="option-label"><input type="radio" name="ch6q1" value="incorrect"> Directly proportional to its wavelength</label>
+                    <label class="option-label"><input type="radio" name="ch6q1" value="correct"> Inversely proportional to its wavelength</label>
+                    <label class="option-label"><input type="radio" name="ch6q1" value="incorrect"> Independent of its operational frequency</label>
+                    <label class="option-label"><input type="radio" name="ch6q1" value="incorrect"> Inversely proportional to its frequency</label>
+                </div>
+                <div class="question-group">
+                    <p class="question-text">2. What is the standard SI numerical value of Planck's Constant ($h$)?</p>
+                    <label class="option-label"><input type="radio" name="ch6q2" value="incorrect"> 6.626 &times; 10^-31 J&middot;s</label>
+                    <label class="option-label"><input type="radio" name="ch6q2" value="correct"> 6.626 &times; 10^-34 J&middot;s</label>
+                    <label class="option-label"><input type="radio" name="ch6q2" value="incorrect"> 9.109 &times; 10^-34 J&middot;s</label>
+                    <label class="option-label"><input type="radio" name="ch6q2" value="incorrect"> 1.602 &times; 10^-19 J&middot;s</label>
+                </div>
+                <div class="quiz-actions">
+                    <button type="button" class="btn btn-check" onclick="checkChapterQuiz('6')">Check Answers</button>
+                    <p class="quiz-feedback" id="feedback-ch6"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="quiz-card" id="quiz-chapter-7">
+            <h3>Chapter 7: X-Rays & Atomic Number (Moseley's Law)</h3>
+            <form data-chapter="7">
+                <div class="question-group">
+                    <p class="question-text">1. Moseley's mathematical expression ($\sqrt{\nu} = a(Z - b)$) proves that the frequency of characteristic X-rays is closely linked to which atomic feature?</p>
+                    <label class="option-label"><input type="radio" name="ch7q1" value="incorrect"> Atomic mass</label>
+                    <label class="option-label"><input type="radio" name="ch7q1" value="correct"> Atomic number</label>
+                    <label class="option-label"><input type="radio" name="ch7q1" value="incorrect"> Mass number</label>
+                    <label class="option-label"><input type="radio" name="ch7q1" value="incorrect"> Ionic charge index</label>
+                </div>
+                <div class="question-group">
+                    <p class="question-text">2. Which electronic transition gives rise to the characteristic $K_{\alpha}$ series line spectrum of X-rays?</p>
+                    <label class="option-label"><input type="radio" name="ch7q2" value="correct"> L-shell (n=2) to K-shell (n=1)</label>
+                    <label class="option-label"><input type="radio" name="ch7q2" value="incorrect"> M-shell (n=3) to K-shell (n=1)</label>
+                    <label class="option-label"><input type="radio" name="ch7q2" value="incorrect"> M-shell (n=3) to L-shell (n=2)</label>
+                    <label class="option-label"><input type="radio" name="ch7q2" value="incorrect"> N-shell (n=4) to M-shell (n=3)</label>
+                </div>
+                <div class="quiz-actions">
+                    <button type="button" class="btn btn-check" onclick="checkChapterQuiz('7')">Check Answers</button>
+                    <p class="quiz-feedback" id="feedback-ch7"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="quiz-card" id="quiz-chapter-8">
+            <h3>Chapter 8: Quantum Numbers</h3>
+            <form data-chapter="8">
+                <div class="question-group">
+                    <p class="question-text">1. Which specific quantum number defines the geometric shape of an atomic orbital subshell?</p>
+                    <label class="option-label"><input type="radio" name="ch8q1" value="incorrect"> Principal Quantum Number ($n$)</label>
+                    <label class="option-label"><input type="radio" name="ch8q1" value="correct"> Azimuthal Quantum Number ($l$)</label>
+                    <label class="option-label"><input type="radio" name="ch8q1" value="incorrect"> Magnetic Quantum Number ($m_l$)</label>
+                    <label class="option-label"><input type="radio" name="ch8q1" value="incorrect"> Spin Quantum Number ($m_s$)</label>
+                </div>
+                <div class="question-group">
+                    <p class="question-text">2. What is the maximum total number of electrons that can be accommodated in a diffuse '$d$' subshell ($l = 2$)?</p>
+                    <label class="option-label"><input type="radio" name="ch8q2" value="incorrect"> 2 electrons</label>
+                    <label class="option-label"><input type="radio" name="ch8q2" value="incorrect"> 6 electrons</label>
+                    <label class="option-label"><input type="radio" name="ch8q2" value="correct"> 10 electrons</label>
+                    <label class="option-label"><input type="radio" name="ch8q2" value="incorrect"> 14 electrons</label>
+                </div>
+                <div class="quiz-actions">
+                    <button type="button" class="btn btn-check" onclick="checkChapterQuiz('8')">Check Answers</button>
+                    <p class="quiz-feedback" id="feedback-ch8"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="quiz-card" id="quiz-chapter-9">
+            <h3>Chapter 9: Electronic Configuration Rules</h3>
+            <form data-chapter="9">
+                <div class="question-group">
+                    <p class="question-text">1. What is the correct ground-state electronic configuration of Chromium ($_{24}\text{Cr}$)?</p>
+                    <label class="option-label"><input type="radio" name="ch9q1" value="incorrect"> [Ar] 3d^4 4s^2</label>
+                    <label class="option-label"><input type="radio" name="ch9q1" value="correct"> [Ar] 3d^5 4s^1</label>
+                    <label class="option-label"><input type="radio" name="ch9q1" value="incorrect"> [Ar] 3d^6 4s^0</label>
+                    <label class="option-label"><input type="radio" name="ch9q1" value="incorrect"> [Ar] 3d^3 4s^2 4p^1</label>
+                </div>
+                <div class="question-group">
+                    <p class="question-text">2. Which fundamental principle states that no two electrons within the same atom can possess an identical set of all four quantum numbers?</p>
+                    <label class="option-label"><input type="radio" name="ch9q2" value="incorrect"> Aufbau Principle</label>
+                    <label class="option-label"><input type="radio" name="ch9q2" value="correct"> Pauli Exclusion Principle</label>
+                    <label class="option-label"><input type="radio" name="ch9q2" value="incorrect"> Hund's Rule</label>
+                    <label class="option-label"><input type="radio" name="ch9q2" value="incorrect"> Heisenberg Principle</label>
+                </div>
+                <div class="quiz-actions">
+                    <button type="button" class="btn btn-check" onclick="checkChapterQuiz('9')">Check Answers</button>
+                    <p class="quiz-feedback" id="feedback-ch9"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="quiz-card" id="quiz-chapter-10">
+            <h3>Chapter 10: Modern Periodic Table & Shielding Effect</h3>
+            <form data-chapter="10">
+                <div class="question-group">
+                    <p class="question-text">1. Moving top to bottom down a vertical group in the periodic table, the magnitude of the shielding effect:</p>
+                    <label class="option-label"><input type="radio" name="ch10q1" value="correct"> Increases due to added shells</label>
+                    <label class="option-label"><input type="radio" name="ch10q1" value="incorrect"> Decreases due to structural mass contraction</label>
+                    <label class="option-label"><input type="radio" name="ch10q1" value="incorrect"> Remains absolutely constant</label>
+                    <label class="option-label"><input type="radio" name="ch10q1" value="incorrect"> Alternates randomly</label>
+                </div>
+                <div class="question-group">
+                    <p class="question-text">2. Elements featuring valence configurations ending in $(n-1)d^{1-10} ns^{1-2}$ are categorized into which specific operational block?</p>
+                    <label class="option-label"><input type="radio" name="ch10q2" value="incorrect"> s-block</label>
+                    <label class="option-label"><input type="radio" name="ch10q2" value="incorrect"> p-block</label>
+                    <label class="option-label"><input type="radio" name="ch10q2" value="correct"> d-block</label>
+                    <label class="option-label"><input type="radio" name="ch10q2" value="incorrect"> f-block</label>
+                </div>
+                <div class="quiz-actions">
+                    <button type="button" class="btn btn-check" onclick="checkChapterQuiz('10')">Check Answers</button>
+                    <p class="quiz-feedback" id="feedback-ch10"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="quiz-card" id="quiz-chapter-11">
+            <h3>Chapter 11: Ionization Energy & Electron Affinity Trends</h3>
+            <form data-chapter="11">
+                <div class="question-group">
+                    <p class="question-text">1. Why does Nitrogen ($_{7}\text{N}$) exhibit a higher first Ionization Energy value compared to Oxygen ($_{8}\text{O}$)?</p>
+                    <label class="option-label"><input type="radio" name="ch11q1" value="incorrect"> Nitrogen possesses a smaller atomic radius</label>
+                    <label class="option-label"><input type="radio" name="ch11q1" value="correct"> Nitrogen has a highly stable, half-filled $2p^3$ subshell</label>
+                    <label class="option-label"><input type="radio" name="ch11q1" value="incorrect"> Oxygen has lower nuclear shield metrics</label>
+                    <label class="option-label"><input type="radio" name="ch11q1" value="incorrect"> Nitrogen is an inert noble structural variant</label>
+                </div>
+                <div class="question-group">
+                    <p class="question-text">2. Which halogen element possesses the highest electron affinity value across the entire periodic table?</p>
+                    <label class="option-label"><input type="radio" name="ch11q2" value="incorrect"> Fluorine</label>
+                    <label class="option-label"><input type="radio" name="ch11q2" value="correct"> Chlorine</label>
+                    <label class="option-label"><input type="radio" name="ch11q2" value="incorrect"> Bromine</label>
+                    <label class="option-label"><input type="radio" name="ch11q2" value="incorrect"> Iodine</label>
+                </div>
+                <div class="quiz-actions">
+                    <button type="button" class="btn btn-check" onclick="checkChapterQuiz('11')">Check Answers</button>
+                    <p class="quiz-feedback" id="feedback-ch11"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="quiz-card" id="quiz-chapter-12">
+            <h3>Chapter 12: Electronegativity & Metallic Character</h3>
+            <form data-chapter="12">
+                <div class="question-group">
+                    <p class="question-text">1. Which element occupies the highest electronegativity rank on the standard Pauling scale with a value of 4.0?</p>
+                    <label class="option-label"><input type="radio" name="ch12q1" value="incorrect"> Oxygen</label>
+                    <label class="option-label"><input type="radio" name="ch12q1" value="correct"> Fluorine</label>
+                    <label class="option-label"><input type="radio" name="ch12q1" value="incorrect"> Chlorine</label>
+                    <label class="option-label"><input type="radio" name="ch12q1" value="incorrect"> Cesium</label>
+                </div>
+                <div class="question-group">
+                    <p class="question-text">2. If the electronegativity difference ($\Delta\text{EN}$) between two chemically combined elements is greater than 1.7, the bond is considered:</p>
+                    <label class="option-label"><input type="radio" name="ch12q2" value="correct"> Predominantly Ionic</label>
+                    <label class="option-label"><input type="radio" name="ch12q2" value="incorrect"> Purely Non-polar Covalent</label>
+                    <label class="option-label"><input type="radio" name="ch12q2" value="incorrect"> Coordinate Covalent</label>
+                    <label class="option-label"><input type="radio" name="ch12q2" value="incorrect"> Metallic network bond</label>
+                </div>
+                <div class="quiz-actions">
+                    <button type="button" class="btn btn-check" onclick="checkChapterQuiz('12')">Check Answers</button>
+                    <p class="quiz-feedback" id="feedback-ch12"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="quiz-card" id="quiz-chapter-13">
+            <h3>Chapter 13: Atomic Radius & Ionic Radius Trends</h3>
+            <form data-chapter="13">
+                <div class="question-group">
+                    <p class="question-text">1. What is the correct decreasing order of ionic radii size for the following isoelectronic species: $\text{O}^{2-}, \text{F}^{-}, \text{Na}^{+}, \text{Mg}^{2+}$?</p>
+                    <label class="option-label"><input type="radio" name="ch13q1" value="correct"> O^2- > F^- > Na^+ > Mg^2+</label>
+                    <label class="option-label"><input type="radio" name="ch13q1" value="incorrect"> Mg^2+ > Na^+ > F^- > O^2-</label>
+                    <label class="option-label"><input type="radio" name="ch13q1" value="incorrect"> Na^+ > Mg^2+ > O^2- > F^-</label>
+                    <label class="option-label"><input type="radio" name="ch13q1" value="incorrect"> F^- > O^2- > Mg^2+ > Na^+</label>
+                </div>
+                <div class="question-group">
+                    <p class="question-text">2. Which statement accurately contrasts the radius size of a typical cation against its parent neutral atom structure?</p>
+                    <label class="option-label"><input type="radio" name="ch13q2" value="incorrect"> The cation is always larger than the parent atom</label>
+                    <label class="option-label"><input type="radio" name="ch13q2" value="correct"> The cation is always smaller than the parent atom</label>
+                    <label class="option-label"><input type="radio" name="ch13q2" value="incorrect"> They hold structurally identical sizes</label>
+                    <label class="option-label"><input type="radio" name="ch13q2" value="incorrect"> Cation sizes vary dynamically with pressure configurations</label>
+                </div>
+                <div class="quiz-actions">
+                    <button type="button" class="btn btn-check" onclick="checkChapterQuiz('13')">Check Answers</button>
+                    <p class="quiz-feedback" id="feedback-ch13"></p>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p class="copyright">&copy; 2026 Imoria Learning. All Rights Reserved.</p>
+            <p class="signature">Made with <span class="heart">♥</span> by Iqra Javed</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
