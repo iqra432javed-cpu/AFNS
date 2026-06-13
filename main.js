@@ -1,568 +1,83 @@
+// ===================== CHAPTER QUIZ CHECKER (mcqs.html) =====================
+// Handles Chapters 1-13, each with 20 questions (ch{N}q1 ... ch{N}q20)
 
+function checkChapterQuiz(chapterNum) {
+    const form = document.querySelector(`form[data-chapter="${chapterNum}"]`);
+    if (!form) return;
 
-/* =====================================================
-   IMORIA LEARNING
-   AFNS Chemistry Portal Logic
-===================================================== */
+    const totalQuestions = 20;
+    let score = 0;
+    let unanswered = 0;
 
+    // Clear previous highlighting
+    form.querySelectorAll('.option-label').forEach(label => {
+        label.classList.remove('correct-answer', 'wrong-answer');
+    });
 
+    for (let i = 1; i <= totalQuestions; i++) {
+        const name = `ch${chapterNum}q${i}`;
+        const options = form.querySelectorAll(`input[name="${name}"]`);
+        if (options.length === 0) continue;
 
-// ================================
-// CHAPTER QUIZ CHECKER
-// ================================
+        const selected = form.querySelector(`input[name="${name}"]:checked`);
 
+        options.forEach(opt => {
+            const label = opt.parentElement;
+            if (opt.value === 'correct') {
+                label.classList.add('correct-answer');
+            } else if (selected && opt === selected && opt.value !== 'correct') {
+                label.classList.add('wrong-answer');
+            }
+        });
 
-function checkChapterQuiz(chapterNum){
+        if (!selected) {
+            unanswered++;
+        } else if (selected.value === 'correct') {
+            score++;
+        }
+    }
 
+    const feedback = document.getElementById(`feedback-ch${chapterNum}`);
+    const percentage = Math.round((score / totalQuestions) * 100);
+    const passed = score >= (totalQuestions * 0.6); // 60% pass threshold for chapter quizzes
 
+    feedback.textContent = `Score: ${score}/${totalQuestions} (${percentage}%)` +
+        (unanswered > 0 ? ` — ${unanswered} unanswered` : '') +
+        (passed ? ' — Great job! 🎉' : ' — Review this chapter again. 📖');
 
-const form =
-document.querySelector(
-`form[data-chapter="${chapterNum}"]`
-);
+    feedback.className = 'feedback ' + (passed ? 'pass' : 'fail');
 
-
-
-if(!form) return;
-
-
-
-
-const questions =
-[
-...new Set(
-[...form.querySelectorAll("input")]
-.map(input=>input.name)
-)
-];
-
-
-
-
-
-let score = 0;
-
-let attempted = 0;
-
-
-
-
-
-questions.forEach(question=>{
-
-
-const selected =
-form.querySelector(
-`input[name="${question}"]:checked`
-);
-
-
-
-if(selected){
-
-
-attempted++;
-
-
-
-if(selected.value==="correct"){
-
-score++;
-
+    // Scroll feedback into view smoothly
+    feedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
-
-
-}
-
-
-
-});
-
-
-
-
-
-
-
-const feedback =
-document.getElementById(
-`feedback-ch${chapterNum}`
-);
-
-
-
-
-
-if(!feedback) return;
-
-
-
-
-
-
-if(attempted < questions.length){
-
-
-
-feedback.className="error";
-
-
-feedback.innerHTML =
-`
-⚠ Complete all questions first.
-<br>
-Attempted ${attempted}/${questions.length}
-`;
-
-
-
-return;
-
-
-
-}
-
-
-
-
-
-
-
-let percent =
-Math.round(
-(score/questions.length)*100
-);
-
-
-
-
-
-
-if(percent >= 50){
-
-
-feedback.className="success";
-
-
-feedback.innerHTML =
-`
-🎉 Passed Chapter Quiz
-
-<br>
-
-Score:
-${score}/${questions.length}
-
-<br>
-
-${percent}%
-
-`;
-
-
-
-}
-
-else{
-
-
-feedback.className="error";
-
-
-feedback.innerHTML =
-`
-📚 Need Revision
-
-<br>
-
-Score:
-${score}/${questions.length}
-
-<br>
-
-${percent}%
-
-`;
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-// ================================
-// MOCK TIMER
-// ================================
-
-
-
-let examTimer;
-
-
-let totalSeconds =
-30 * 60;
-
-
-
-
-
-
-
-function startTimer(){
-
-
-
-const timer =
-document.getElementById(
-"mock-timer"
-);
-
-
-
-if(!timer) return;
-
-
-
-
-
-examTimer =
-setInterval(()=>{
-
-
-
-
-
-let minutes =
-Math.floor(
-totalSeconds/60
-);
-
-
-
-let seconds =
-totalSeconds % 60;
-
-
-
-
-
-timer.textContent =
-
-`${String(minutes).padStart(2,"0")}:
-${String(seconds).padStart(2,"0")}`;
-
-
-
-
-
-
-
-
-if(totalSeconds <= 0){
-
-
-
-clearInterval(examTimer);
-
-
-
-submitGrandTest();
-
-
-return;
-
-
-}
-
-
-
-
-totalSeconds--;
-
-
-
-
-},1000);
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-// ================================
-// GRAND MOCK SUBMISSION
-// ================================
-
-
-
-function submitGrandTest(){
-
-
-
-const form =
-document.getElementById(
-"grand-mock-test"
-);
-
-
-
-if(!form) return;
-
-
-
-
-
-clearInterval(examTimer);
-
-
-
-
-
-
-
-let score = 0;
-
-
-let attempted = 0;
-
-
-
-
-
-const answers =
-form.querySelectorAll(
-"input:checked"
-);
-
-
-
-
-
-answers.forEach(answer=>{
-
-
-
-attempted++;
-
-
-
-if(answer.value==="correct"){
-
-
-score++;
-
-
-}
-
-
-
-});
-
-
-
-
-
-
-
-
-const totalQuestions = 50;
-
-
-
-
-
-const percentage =
-
-Math.round(
-(score/totalQuestions)*100
-);
-
-
-
-
-
-
-
-const resultBox =
-document.getElementById(
-"test-results-box"
-);
-
-
-
-
-
-if(!resultBox) return;
-
-
-
-
-
-
-
-
-let status;
-
-
-
-
-
-if(percentage >= 50){
-
-
-
-status =
-`
-<h1 class="success">
-PASS 🎉
-</h1>
-
-<p>
-Excellent AFNS preparation level.
-</p>
-
-`;
-
-
-
-}
-
-else{
-
-
-status =
-`
-<h1 class="error">
-RETAIN 📖
-</h1>
-
-<p>
-Revise weak chapters and try again.
-</p>
-
-`;
-
-
-
-}
-
-
-
-
-
-
-
-resultBox.innerHTML =
-
-`
-
-${status}
-
-
-<h2>
-Grand Test Result
-</h2>
-
-
-<p>
-
-Score:
-<strong>
-${score}/${totalQuestions}
-</strong>
-
-</p>
-
-
-
-<p>
-
-Percentage:
-
-<strong>
-${percentage}%
-</strong>
-
-</p>
-
-
-
-
-<p>
-
-Attempted:
-${attempted}/${totalQuestions}
-
-</p>
-
-
-`;
-
-
-
-
-
-
-resultBox.classList.remove(
-"hidden"
-);
-
-
-
-
-
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-// ================================
-// PAGE LOAD
-// ================================
-
-
-
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
-
-
-startTimer();
-
-
-
+// ===================== SMOOTH SCROLL FOR SIDEBAR LINKS (chemistry-notes.html) =====================
+document.addEventListener('DOMContentLoaded', () => {
+    const sidebarLinks = document.querySelectorAll('.notes-sidebar a[href^="#"]');
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+                e.preventDefault();
+                targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // Highlight active sidebar link on scroll
+    const chapters = document.querySelectorAll('.chapter-block');
+    if (chapters.length > 0 && sidebarLinks.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    sidebarLinks.forEach(link => link.classList.remove('active'));
+                    const activeLink = document.querySelector(`.notes-sidebar a[href="#${entry.target.id}"]`);
+                    if (activeLink) activeLink.classList.add('active');
+                }
+            });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+
+        chapters.forEach(chapter => observer.observe(chapter));
+    }
 });
