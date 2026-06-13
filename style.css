@@ -1,323 +1,915 @@
-:root{
-  --primary:#0a2540;
-  --primary-light:#13395e;
-  --secondary:#4ea8de;
-  --accent-green:#9be8c4;
-  --bg:#ffffff;
-  --bg-alt:#f4f6f8;
-  --highlight:#fff8d6;
-  --highlight-border:#f0d96b;
-  --text:#1f2d3d;
-  --text-muted:#5a6b7d;
-  --border:#dbe2ea;
-  --radius:10px;
-  --shadow:0 2px 8px rgba(10,37,64,0.06);
+```css
+/* ==========================================================================
+   IMORIA LEARNING - GLOBAL DESIGN SYSTEM & STYLESHEET
+   Project: AFNS Chemistry Preparation Portal
+   Author: Expert UI/UX Designer & Senior Front-End Developer
+   Year: 2026
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. DESIGN SYSTEM VARIABLES & ROOT CONFIGURATION
+   -------------------------------------------------------------------------- */
+:root {
+    /* Color Palette */
+    --primary: #1a365d;          /* Deep Navy - Institutional/Medical Authority */
+    --primary-light: #2a4365;    /* Medium Navy for interactive states */
+    --secondary: #319795;        /* Premium Teal - Clinical / Digital Accent */
+    --secondary-light: #e6fffa;  /* Light Teal tint for backgrounds */
+    --accent: #d69e2e;           /* Amber Gold - High alert / Attention / Timer */
+    --accent-light: #fefcbf;     /* Light Amber tint */
+    
+    /* Neutral Shades */
+    --bg-main: #f7fafc;          /* Soft Off-White/Grey Canvas */
+    --bg-card: #ffffff;          /* Pure White for Surface Components */
+    --text-dark: #2d3748;        /* Dark Slate for High Contrast Readability */
+    --text-muted: #718096;       /* Muted Slate for Secondary Meta Content */
+    --border-color: #e2e8f0;     /* Soft Divider Grey */
+
+    /* Status Colors */
+    --success: #2f855a;          /* Soft Emerald Green */
+    --success-bg: #f0fff4;       /* Success Alert Tint */
+    --error: #c53030;            /* Deep Crimson Red */
+    --error-bg: #fff5f5;         /* Error Alert Tint */
+
+    /* Typography Scale */
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    
+    /* Layout Properties */
+    --max-width: 1200px;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.02);
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
 }
 
-*{box-sizing:border-box;}
-
-body{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  background:var(--bg-alt);
-  color:var(--text);
-  line-height:1.7;
-  font-size:16px;
-  margin:0;
-  padding:0;
+/* --------------------------------------------------------------------------
+   2. CUSTOM CSS RESET & BASE STYLES
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.chapter{
-  background:var(--bg);
-  max-width:900px;
-  margin:24px auto;
-  padding:0 0 32px;
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  border:1px solid var(--border);
-  overflow:hidden;
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
 }
 
-.chapter-header{
-  background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 100%);
-  padding:28px 32px;
-  margin-bottom:24px;
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
-.chapter-header h1{
-  color:#ffffff;
-  margin:0;
-  font-size:1.9rem;
-  font-weight:700;
-  letter-spacing:0.3px;
+/* Typography Overrides */
+h1, h2, h3, h4 {
+    color: var(--primary);
+    font-weight: 700;
+    line-height: 1.25;
 }
 
-h1,h2,h3,h4{
-  font-weight:700;
-  color:var(--primary);
-  line-height:1.3;
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-fast);
 }
 
-h2{
-  font-size:1.5rem;
-  margin:28px 32px 16px;
-  padding-bottom:8px;
-  border-bottom:2px solid var(--secondary);
+ul {
+    list-style: none;
 }
 
-h3{
-  font-size:1.2rem;
-  margin:24px 32px 12px;
-  color:var(--primary-light);
+img, svg {
+    display: inline-block;
+    vertical-align: middle;
 }
 
-h4{
-  font-size:1.05rem;
-  margin:18px 32px 10px;
-  color:var(--primary-light);
+/* --------------------------------------------------------------------------
+   3. SHARED LAYOUT COMPONENTS (HEADER, NAV, FOOTER)
+   -------------------------------------------------------------------------- */
+/* Sticky Site Header */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--bg-card);
+    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid var(--border-color);
 }
 
-p{
-  margin:0 32px 14px;
-  color:var(--text);
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem 2rem;
 }
 
-ul,ol{
-  margin:0 32px 16px;
-  padding-left:22px;
+/* Branding Logo */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-li{
-  margin-bottom:8px;
-  color:var(--text);
+.brand-logo {
+    font-size: 1.75rem;
 }
 
-li strong{
-  color:var(--primary);
+.brand-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: -0.5px;
 }
 
-a{
-  color:var(--secondary);
-  text-decoration:none;
+/* Navigation Architecture */
+.main-navigation ul {
+    display: flex;
+    gap: 1.5rem;
 }
 
-a:hover{
-  text-decoration:underline;
+.nav-link {
+    position: relative;
+    padding: 0.5rem 0.25rem;
+    font-weight: 500;
+    color: var(--text-muted);
 }
 
-.topic-introduction{
-  background:var(--bg);
-  padding-bottom:8px;
+.nav-link:hover {
+    color: var(--primary);
 }
 
-.topic-introduction p{
-  font-size:1.02rem;
-  color:var(--text-muted);
+/* Active Page Indicator State */
+.nav-link.active {
+    color: var(--secondary);
+    font-weight: 600;
 }
 
-.complete-notes{
-  background:var(--bg);
-  padding-top:8px;
-  padding-bottom:8px;
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary);
+    border-radius: 2px;
 }
 
-table{
-  width:calc(100% - 64px);
-  margin:16px 32px 24px;
-  border-collapse:collapse;
-  font-size:0.95rem;
-  background:var(--bg);
-  border:1px solid var(--border);
-  border-radius:6px;
-  overflow:hidden;
+/* Shared Footer Architecture */
+.site-footer {
+    background-color: var(--primary);
+    color: var(--bg-main);
+    padding: 2.5rem 2rem;
+    margin-top: 4rem;
+    border-top: 4px solid var(--secondary);
 }
 
-caption{
-  text-align:left;
-  font-weight:700;
-  color:var(--primary);
-  background:var(--bg-alt);
-  padding:10px 14px;
-  border:1px solid var(--border);
-  border-bottom:none;
-  border-radius:6px 6px 0 0;
-  font-size:0.95rem;
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
 }
 
-thead th{
-  background:var(--primary);
-  color:#ffffff;
-  text-align:left;
-  padding:10px 14px;
-  font-weight:600;
-  font-size:0.92rem;
+.site-footer .copyright {
+    font-size: 0.9rem;
+    opacity: 0.85;
 }
 
-tbody td{
-  padding:10px 14px;
-  border-top:1px solid var(--border);
-  color:var(--text);
-  vertical-align:top;
+.site-footer .signature {
+    font-size: 0.85rem;
+    opacity: 0.75;
+    letter-spacing: 0.5px;
 }
 
-tbody tr:nth-child(even){
-  background:var(--bg-alt);
+/* Heart Beats Animation */
+.heart {
+    display: inline-block;
+    color: #e53e3e;
+    animation: pulse 1.5s infinite;
 }
 
-tbody tr:hover{
-  background:#eaf2fb;
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
 }
 
-p strong, li strong, td strong{
-  font-weight:700;
+/* --------------------------------------------------------------------------
+   4. GLOBAL INTERACTIVE BUTTON DESIGN SYSTEM
+   -------------------------------------------------------------------------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
 }
 
-.quick-revision{
-  background:var(--bg-alt);
-  margin:24px 0 0;
-  padding:24px 0 8px;
-  border-top:3px solid var(--secondary);
+.btn:active {
+    transform: scale(0.98);
 }
 
-.quick-revision h2{
-  color:var(--primary);
-  border-bottom:2px solid var(--accent-green);
+/* Primary Teal Action Buttons */
+.btn-primary {
+    background-color: var(--secondary);
+    color: var(--bg-card);
 }
 
-.quick-revision ul{
-  list-style:none;
-  padding-left:0;
-  margin:0 32px 16px;
+.btn-primary:hover {
+    background-color: #287e7c;
+    box-shadow: 0 4px 12px rgba(49, 151, 149, 0.3);
 }
 
-.quick-revision li{
-  position:relative;
-  padding:10px 14px 10px 36px;
-  margin-bottom:10px;
-  background:var(--bg);
-  border:1px solid var(--border);
-  border-radius:6px;
-  font-size:0.96rem;
+/* Accent Amber Live Test Buttons */
+.btn-accent {
+    background-color: var(--accent);
+    color: var(--primary);
 }
 
-.quick-revision li::before{
-  content:"✓";
-  position:absolute;
-  left:12px;
-  top:10px;
-  color:var(--secondary);
-  font-weight:700;
+.btn-accent:hover {
+    background-color: #b7861e;
+    color: var(--bg-card);
+    box-shadow: 0 4px 12px rgba(214, 158, 46, 0.3);
 }
 
-.quick-revision li strong:first-child{
-  color:var(--primary);
+/* Chapter Validation Button Style */
+.btn-check {
+    background-color: var(--primary);
+    color: var(--bg-card);
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
 }
 
-.quick-revision li strong{
-  display:inline;
+.btn-check:hover {
+    background-color: var(--primary-light);
 }
 
-.quick-revision li:has(strong:only-child),
-.quick-revision li{
-  background:var(--bg);
+/* Master Grand Test Submission Button */
+.btn-submit-test {
+    background-color: var(--secondary);
+    color: var(--bg-card);
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 400px;
+    box-shadow: var(--shadow-md);
 }
 
-.quick-revision li strong:first-of-type:is(:contains("AFNS Tip")){
-  display:block;
+.btn-submit-test:hover {
+    background-color: #236c6a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(49, 151, 149, 0.4);
 }
 
-.complete-notes h3:first-of-type{
-  margin-top:8px;
+/* --------------------------------------------------------------------------
+   5. INDEX / MAIN DASHBOARD SPECIFIC LAYOUT (.dashboard-container)
+   -------------------------------------------------------------------------- */
+.dashboard-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 2rem;
 }
 
-p:has(strong:only-child:first-child){
-  background:var(--bg-alt);
-  border:1px solid var(--border);
-  border-left:4px solid var(--primary);
-  border-radius:6px;
-  padding:14px 18px;
-  margin:0 32px 14px;
+/* Hero Section Branding */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 3.5rem 2.5rem;
+    margin-bottom: 3.5rem;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
 }
 
-li:has(strong){
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: rgba(49, 151, 149, 0.15);
+    border-radius: 50%;
+    filter: blur(40px);
 }
 
-li:has(> strong:only-child){
-  list-style:none;
-  margin-left:-22px;
-  padding:10px 14px;
-  background:var(--highlight);
-  border:1px solid var(--highlight-border);
-  border-radius:6px;
+.hero-content {
+    max-width: 750px;
+    position: relative;
+    z-index: 2;
 }
 
-table caption ~ tbody tr:has(td:contains("AFNS")){
-  background:var(--highlight);
+.badge {
+    display: inline-block;
+    background-color: rgba(49, 151, 149, 0.2);
+    color: #4fd1c5;
+    border: 1px solid rgba(49, 151, 149, 0.4);
+    padding: 0.35rem 0.85rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    margin-bottom: 1.25rem;
 }
 
-li strong:contains("AFNS Tip"){
-  color:#b08400;
+.hero-section h1 {
+    color: var(--bg-card);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
 }
 
-@media (max-width:768px){
-  .chapter{
-    margin:12px;
-    border-radius:8px;
-  }
-  .chapter-header{
-    padding:20px 18px;
-  }
-  .chapter-header h1{
-    font-size:1.4rem;
-  }
-  h2{
-    font-size:1.2rem;
-    margin:20px 18px 12px;
-  }
-  h3{
-    font-size:1.05rem;
-    margin:18px 18px 10px;
-  }
-  h4{
-    margin:14px 18px 8px;
-  }
-  p,ul,ol{
-    margin-left:18px;
-    margin-right:18px;
-  }
-  table{
-    width:calc(100% - 36px);
-    margin:12px 18px 18px;
-    font-size:0.85rem;
-    display:block;
-    overflow-x:auto;
-    white-space:nowrap;
-  }
-  caption{
-    white-space:normal;
-  }
-  thead th,tbody td{
-    padding:8px 10px;
-  }
-  .quick-revision ul{
-    margin:0 18px 16px;
-  }
-  .quick-revision li{
-    padding:9px 12px 9px 32px;
-    font-size:0.9rem;
-  }
+.hero-section p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.6;
 }
 
-@media (min-width:769px) and (max-width:1100px){
-  .chapter{
-    max-width:92%;
-  }
+/* Dashboard Modules Grid Layout */
+.modules-section {
+    margin-bottom: 2rem;
 }
 
-@media (max-width:480px){
-  body{
-    font-size:14px;
-  }
-  .chapter-header h1{
-    font-size:1.2rem;
-  }
+.section-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
 }
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary);
+    border-radius: 2px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* Premium Module Semantic Cards */
+.dashboard-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.dashboard-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.06), 0 10px 10px -5px rgba(0,0,0,0.03);
+}
+
+/* Card Icons Branding Wrapper */
+.card-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.card-icon {
+    width: 28px;
+    height: 28px;
+}
+
+/* Contextual Card Colors */
+.blue-bg { background-color: #ebf8ff; color: #2b6cb0; }
+.teal-bg { background-color: var(--secondary-light); color: var(--secondary); }
+.amber-bg { background-color: #fefff0; color: #b7861e; }
+
+.card-body {
+    flex-grow: 1;
+}
+
+.dashboard-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+}
+
+.dashboard-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+}
+
+.card-meta {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    background-color: var(--bg-main);
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: 1.5rem;
+}
+
+.card-footer {
+    margin-top: auto;
+}
+
+.card-footer .btn {
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   6. STUDY NOTES WORKSPACE (.notes-layout-container)
+   -------------------------------------------------------------------------- */
+.notes-layout-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: 0 2rem;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+/* Sticky Left Navigation Sidebar */
+.notes-sidebar {
+    position: sticky;
+    top: calc(1rem + 70px); /* Aligned neatly with header space */
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.sidebar-header h3 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    border-bottom: 2px solid var(--bg-main);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar-links li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-links a {
+    display: block;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.sidebar-links a:hover {
+    background-color: var(--bg-main);
+    color: var(--secondary);
+    padding-left: 1rem;
+}
+
+/* Main Content Column Area */
+.notes-body {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+/* Individual Chapter Card Section */
+.chapter-section {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-md);
+    scroll-margin-top: 90px; /* Provides safety offset during anchor jumps */
+}
+
+.chapter-section h2 {
+    font-size: 1.6rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.chapter-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.75rem;
+}
+
+.chapter-content li {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+}
+
+.chapter-content li strong {
+    color: var(--primary);
+}
+
+/* Modern High-Yield Data Tables */
+.chapter-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.75rem 0;
+    font-size: 0.9rem;
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.chapter-content th, 
+.chapter-content td {
+    padding: 0.85rem 1.25rem;
+    text-align: left;
+}
+
+.chapter-content th {
+    background-color: var(--primary);
+    color: var(--bg-card);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.chapter-content tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color var(--transition-fast);
+}
+
+.chapter-content tbody tr:nth-child(even) {
+    background-color: var(--bg-main);
+}
+
+.chapter-content tbody tr:hover {
+    background-color: #edf2f7;
+}
+
+/* High-Yield Custom Revision Callout Boxes */
+.quick-revision-box {
+    background-color: var(--secondary-light);
+    color: #234e52;
+    border-left: 4px solid var(--secondary);
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 1.5rem;
+}
+
+.quick-revision-box strong {
+    color: var(--secondary);
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   7. PRACTICE QUIZ PORTAL STYLING (.quiz-portal-container)
+   -------------------------------------------------------------------------- */
+.quiz-portal-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+}
+
+.quiz-page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.quiz-page-header h1 {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.quiz-page-header p {
+    color: var(--text-muted);
+}
+
+/* Quizzes Main Container Cards */
+.quiz-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow-md);
+}
+
+.quiz-card h3 {
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--bg-main);
+    padding-bottom: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+/* Single MCQ Content Structure */
+.question-group {
+    margin-bottom: 2rem;
+}
+
+.question-text {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Custom Interactive Option Radio Buttons */
+.option-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all var(--transition-fast);
+}
+
+.option-label:hover {
+    background-color: #edf2f7;
+    border-color: var(--text-muted);
+}
+
+/* Radio Checked State via CSS :has Modifier */
+.option-label:has(input[type="radio"]:checked) {
+    background-color: var(--secondary-light);
+    border-color: var(--secondary);
+    color: var(--secondary);
+}
+
+.option-label input[type="radio"] {
+    accent-color: var(--secondary);
+    width: 18px;
+    height: 18px;
+}
+
+/* Actions Area inside Quiz Card */
+.quiz-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Feedback Utilities (Dynamic JS insertion) */
+.quiz-feedback {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    display: none; /* Controlled dynamically via main.js */
+}
+
+.quiz-feedback.success {
+    display: block;
+    background-color: var(--success-bg);
+    color: var(--success);
+}
+
+.quiz-feedback.error {
+    display: block;
+    background-color: var(--error-bg);
+    color: var(--error);
+}
+
+/* --------------------------------------------------------------------------
+   8. GRAND MOCK TEST SPECIAL SUITE (.mock-test-container)
+   -------------------------------------------------------------------------- */
+.mock-test-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+}
+
+/* Sticky Fluorescent Glowing Countdown Widget */
+.timer-card {
+    position: sticky;
+    top: 85px;
+    z-index: 900;
+    background-color: var(--primary);
+    color: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 2rem;
+    margin-bottom: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 25px -5px rgba(26, 54, 93, 0.4), 0 8px 16px -4px rgba(214, 158, 46, 0.2);
+    border-left: 6px solid var(--accent);
+}
+
+.timer-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+}
+
+.timer-subtext {
+    font-size: 0.8rem;
+    opacity: 0.75;
+    margin-top: 0.1rem;
+}
+
+.timer-countdown-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(255,255,255,0.1);
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius-sm);
+}
+
+.countdown-icon {
+    font-size: 1.2rem;
+}
+
+.timer-countdown {
+    font-family: monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-shadow: 0 0 4px rgba(214, 158, 46, 0.4);
+}
+
+/* Index Question Enumerator Class */
+.q-num {
+    color: var(--secondary);
+    margin-right: 0.25rem;
+}
+
+/* Submission Layout Wrapper */
+.test-submission-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+/* Evaluation Score Summary Results Card */
+.results-card {
+    background: linear-gradient(135deg, #ffffff 0%, var(--bg-main) 100%);
+    border: 2px solid var(--secondary);
+    border-radius: var(--radius-lg);
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    box-shadow: var(--shadow-lg);
+    animation: slideUp var(--transition-normal) forwards;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.results-card h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.results-card .score-display {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--secondary);
+    margin: 1.5rem 0;
+}
+
+.results-card .grade-verdict {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+/* Global Hidden Helper Variable Utility */
+.hidden {
+    display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   9. EXTENSIVE RESPONSIVE DESIGN (MEDIA QUERIES)
+   -------------------------------------------------------------------------- */
+
+/* Tablet & Smaller Layout Breakpoint (Max 992px) */
+@media (max-width: 992px) {
+    /* Fluid Column Compression for Notes Workspace */
+    .notes-layout-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .notes-sidebar {
+        position: static;
+        max-height: 250px;
+        width: 100%;
+    }
+    
+    .hero-section {
+        padding: 2.5rem 1.75rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile Layout Breakpoint (Max 768px) */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .main-navigation ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .hero-section {
+        text-align: center;
+        padding: 2rem 1.25rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chapter-section, 
+    .quiz-card {
+        padding: 1.5rem;
+    }
+
+    /* Wrap tables horizontally safely on small mobile dimensions */
+    .chapter-content {
+        overflow-x: auto;
+    }
+    
+    .timer-card {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+        padding: 1rem;
+    }
+}
+
+```
