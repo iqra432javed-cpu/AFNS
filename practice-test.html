@@ -1,176 +1,586 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AFNS Chemistry Mock Test | Imoria Learning</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Imoria Learning | Grand Mock Test</title>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
+
+
+
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <div class="brand">
-      <span class="brand-name">🩺 Imoria Learning</span>
-      <span class="brand-sub">AFNS Chemistry Preparation Portal</span>
-    </div>
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="index.html">Dashboard</a>
-      <a href="chemistry-notes.html">Study Notes</a>
-      <a href="mcqs.html">Practice MCQs</a>
-      <a href="practice-test.html" class="active">Mock Test</a>
-    </nav>
-  </div>
+
+
+<header class="site-header" id="top">
+
+<div class="container nav-container">
+
+
+<a href="index.html" class="brand">
+
+<span class="logo">🩺</span>
+
+<span>
+
+<strong>Imoria Learning</strong>
+
+<small>AFNS Chemistry</small>
+
+</span>
+
+</a>
+
+
+
+
+<nav class="main-nav">
+
+<a href="index.html">
+Dashboard
+</a>
+
+<a href="chemistry-notes.html">
+Study Notes
+</a>
+
+<a href="mcqs.html">
+Practice MCQs
+</a>
+
+<a href="practice-test.html" class="active">
+Mock Test
+</a>
+
+
+</nav>
+
+
+</div>
+
 </header>
 
-<main class="mock-test-container">
 
-  <div class="portal-heading">
-    <h1>Grand AFNS Chemistry Mock Test</h1>
-    <p>15 conceptual MCQs covering Atomic Structure, Periodic Trends &amp; Quantum Concepts — Punjab Board, FBISE &amp; AFNS standard.</p>
-  </div>
 
-  <div class="timer-card">
-    <span class="timer-label">Time Remaining:</span>
-    <span id="mock-timer" class="timer-countdown">30:00</span>
-  </div>
 
-  <form id="grand-mock-test">
 
-    <div class="question-group">
-      <p class="question-text">1. An electron jumps from n=4 to n=2 in a hydrogen atom. The spectral line emitted belongs to which series?</p>
-      <label class="option-label"><input type="radio" name="mq1" value="incorrect"> Lyman series</label>
-      <label class="option-label"><input type="radio" name="mq1" value="correct"> Balmer series</label>
-      <label class="option-label"><input type="radio" name="mq1" value="incorrect"> Paschen series</label>
-      <label class="option-label"><input type="radio" name="mq1" value="incorrect"> Brackett series</label>
-    </div>
 
-    <div class="question-group">
-      <p class="question-text">2. In Rutherford's alpha-scattering experiment, the small number of particles that bounced back at large angles led directly to the conclusion that:</p>
-      <label class="option-label"><input type="radio" name="mq2" value="incorrect"> Atoms have no internal structure</label>
-      <label class="option-label"><input type="radio" name="mq2" value="incorrect"> Electrons are negatively charged</label>
-      <label class="option-label"><input type="radio" name="mq2" value="correct"> The positive charge and most of the mass are concentrated in a tiny nucleus</label>
-      <label class="option-label"><input type="radio" name="mq2" value="incorrect"> Neutrons exist in the nucleus</label>
-    </div>
 
-    <div class="question-group">
-      <p class="question-text">3. Which set of quantum numbers (n, l, mₗ, mₛ) is NOT permissible for an electron?</p>
-      <label class="option-label"><input type="radio" name="mq3" value="incorrect"> 3, 2, -1, +½</label>
-      <label class="option-label"><input type="radio" name="mq3" value="incorrect"> 2, 1, 0, -½</label>
-      <label class="option-label"><input type="radio" name="mq3" value="correct"> 2, 2, 0, +½</label>
-      <label class="option-label"><input type="radio" name="mq3" value="incorrect"> 4, 0, 0, -½</label>
-    </div>
+<div class="timer-card">
 
-    <div class="question-group">
-      <p class="question-text">4. The electronic configuration of an element is [Ar] 3d⁵ 4s¹ instead of the expected [Ar] 3d⁴ 4s². This anomaly in chromium is best explained by:</p>
-      <label class="option-label"><input type="radio" name="mq4" value="incorrect"> Lower nuclear charge of chromium</label>
-      <label class="option-label"><input type="radio" name="mq4" value="incorrect"> Higher shielding by 4s electrons</label>
-      <label class="option-label"><input type="radio" name="mq4" value="correct"> Extra stability gained from a half-filled d sublevel and symmetrical electron distribution</label>
-      <label class="option-label"><input type="radio" name="mq4" value="incorrect"> Violation of the Aufbau principle</label>
-    </div>
+Time Remaining:
 
-    <div class="question-group">
-      <p class="question-text">5. Which observation provided the strongest evidence that cathode rays consist of negatively charged material particles, not electromagnetic waves?</p>
-      <label class="option-label"><input type="radio" name="mq5" value="incorrect"> They travel in straight lines</label>
-      <label class="option-label"><input type="radio" name="mq5" value="incorrect"> They produce fluorescence on a ZnS screen</label>
-      <label class="option-label"><input type="radio" name="mq5" value="correct"> They are deflected toward the positive plate and rotate a light paddle wheel</label>
-      <label class="option-label"><input type="radio" name="mq5" value="incorrect"> They produce X-rays on striking a metal target</label>
-    </div>
+<span id="mock-timer">
+30:00
+</span>
 
-    <div class="question-group">
-      <p class="question-text">6. Why does the first ionization energy of oxygen show a slight decrease compared to nitrogen, despite oxygen having a higher nuclear charge?</p>
-      <label class="option-label"><input type="radio" name="mq6" value="incorrect"> Oxygen has a larger atomic radius than nitrogen</label>
-      <label class="option-label"><input type="radio" name="mq6" value="incorrect"> Oxygen has lower effective nuclear charge</label>
-      <label class="option-label"><input type="radio" name="mq6" value="correct"> Nitrogen's stable half-filled 2p³ configuration makes its electron harder to remove than oxygen's paired 2p electron</label>
-      <label class="option-label"><input type="radio" name="mq6" value="incorrect"> Oxygen has fewer protons than nitrogen</label>
-    </div>
+</div>
 
-    <div class="question-group">
-      <p class="question-text">7. In Chadwick's experiment, gamma rays were ruled out as the unknown radiation primarily because:</p>
-      <label class="option-label"><input type="radio" name="mq7" value="incorrect"> Gamma rays could not be detected by an ionization chamber</label>
-      <label class="option-label"><input type="radio" name="mq7" value="correct"> Conservation of energy and momentum could not account for the high recoil energy of protons knocked from paraffin if the radiation were massless gamma rays</label>
-      <label class="option-label"><input type="radio" name="mq7" value="incorrect"> Gamma rays are positively charged</label>
-      <label class="option-label"><input type="radio" name="mq7" value="incorrect"> Gamma rays do not penetrate beryllium</label>
-    </div>
 
-    <div class="question-group">
-      <p class="question-text">8. Arrange the following isoelectronic species in order of increasing ionic radius: Mg²⁺, Na⁺, F⁻, O²⁻</p>
-      <label class="option-label"><input type="radio" name="mq8" value="incorrect"> O²⁻ &lt; F⁻ &lt; Na⁺ &lt; Mg²⁺</label>
-      <label class="option-label"><input type="radio" name="mq8" value="correct"> Mg²⁺ &lt; Na⁺ &lt; F⁻ &lt; O²⁻</label>
-      <label class="option-label"><input type="radio" name="mq8" value="incorrect"> Na⁺ &lt; Mg²⁺ &lt; O²⁻ &lt; F⁻</label>
-      <label class="option-label"><input type="radio" name="mq8" value="incorrect"> F⁻ &lt; O²⁻ &lt; Mg²⁺ &lt; Na⁺</label>
-    </div>
 
-    <div class="question-group">
-      <p class="question-text">9. Moseley's Law (√ν = a(Z − b)) was historically significant because it established that the fundamental basis of element arrangement should be:</p>
-      <label class="option-label"><input type="radio" name="mq9" value="incorrect"> Atomic mass, as proposed by Mendeleev</label>
-      <label class="option-label"><input type="radio" name="mq9" value="correct"> Atomic number, correcting anomalies like Co/Ni and Ar/K in the old periodic table</label>
-      <label class="option-label"><input type="radio" name="mq9" value="incorrect"> Number of neutrons</label>
-      <label class="option-label"><input type="radio" name="mq9" value="incorrect"> Electron affinity values</label>
-    </div>
 
-    <div class="question-group">
-      <p class="question-text">10. According to Bohr's model, an electron revolving in a stationary orbit does not radiate energy. This postulate was introduced mainly to resolve which defect of Rutherford's model?</p>
-      <label class="option-label"><input type="radio" name="mq10" value="incorrect"> Inability to explain alpha particle scattering</label>
-      <label class="option-label"><input type="radio" name="mq10" value="correct"> The classical prediction that an orbiting electron would continuously lose energy and spiral into the nucleus</label>
-      <label class="option-label"><input type="radio" name="mq10" value="incorrect"> Inability to explain the existence of the nucleus</label>
-      <label class="option-label"><input type="radio" name="mq10" value="incorrect"> Inability to explain isotopes</label>
-    </div>
 
-    <div class="question-group">
-      <p class="question-text">11. Why does electron affinity become less negative (decreases) on moving down a group, despite increasing nuclear charge?</p>
-      <label class="option-label"><input type="radio" name="mq11" value="incorrect"> The added electron experiences greater attraction from the larger nucleus</label>
-      <label class="option-label"><input type="radio" name="mq11" value="correct"> The increase in atomic size and shielding outweighs the increased nuclear charge, reducing attraction for the incoming electron</label>
-      <label class="option-label"><input type="radio" name="mq11" value="incorrect"> The number of valence electrons decreases</label>
-      <label class="option-label"><input type="radio" name="mq11" value="incorrect"> Electronegativity increases down the group</label>
-    </div>
 
-    <div class="question-group">
-      <p class="question-text">12. A large jump observed between the 1st and 2nd ionization energies of an alkali metal (Group 1 element) is best explained by:</p>
-      <label class="option-label"><input type="radio" name="mq12" value="incorrect"> The atom becoming radioactive after first ionization</label>
-      <label class="option-label"><input type="radio" name="mq12" value="correct"> The second electron being removed from a completely filled, lower-energy inner shell closer to the nucleus</label>
-      <label class="option-label"><input type="radio" name="mq12" value="incorrect"> The increase in atomic radius after ionization</label>
-      <label class="option-label"><input type="radio" name="mq12" value="incorrect"> A decrease in nuclear charge</label>
-    </div>
+<main class="container exam-container">
 
-    <div class="question-group">
-      <p class="question-text">13. The shielding (screening) effect remains approximately constant across a period because:</p>
-      <label class="option-label"><input type="radio" name="mq13" value="incorrect"> The number of protons stays the same</label>
-      <label class="option-label"><input type="radio" name="mq13" value="correct"> Electrons are added to the same principal shell, so the number of inner shielding shells does not change</label>
-      <label class="option-label"><input type="radio" name="mq13" value="incorrect"> Electronegativity stays constant</label>
-      <label class="option-label"><input type="radio" name="mq13" value="incorrect"> Atomic radius increases steadily</label>
-    </div>
 
-    <div class="question-group">
-      <p class="question-text">14. Which combination correctly matches a sublevel with its maximum electron capacity and orbital shape?</p>
-      <label class="option-label"><input type="radio" name="mq14" value="incorrect"> p sublevel: 6 electrons, spherical shape</label>
-      <label class="option-label"><input type="radio" name="mq14" value="correct"> d sublevel: 10 electrons, 5 orbitals of clover-leaf shape</label>
-      <label class="option-label"><input type="radio" name="mq14" value="incorrect"> s sublevel: 2 electrons, dumbbell shape</label>
-      <label class="option-label"><input type="radio" name="mq14" value="incorrect"> f sublevel: 10 electrons, 7 orbitals</label>
-    </div>
+<div class="notes-header">
 
-    <div class="question-group">
-      <p class="question-text">15. The atomic radii of 4d and 5d transition series elements are surprisingly similar. This is a direct consequence of:</p>
-      <label class="option-label"><input type="radio" name="mq15" value="incorrect"> Increased shielding by d electrons in the 5d series</label>
-      <label class="option-label"><input type="radio" name="mq15" value="correct"> Lanthanide contraction, where poor shielding by 4f electrons causes a gradual radius decrease that offsets the expected increase</label>
-      <label class="option-label"><input type="radio" name="mq15" value="incorrect"> Both series having identical effective nuclear charge</label>
-      <label class="option-label"><input type="radio" name="mq15" value="incorrect"> The Bohr radius being constant for all elements</label>
-    </div>
+<h1>
+Grand Chemistry Mock Examination
+</h1>
 
-    <button type="button" class="btn btn-submit-test" onclick="submitGrandTest()">Submit Complete Test</button>
-  </form>
+<p>
+15 comprehensive AFNS style questions from all chapters.
+</p>
 
-  <div id="test-results-box" class="results-card hidden"></div>
 
-</main>
+</div>
 
-<footer class="site-footer">
-  <p>© 2026 Imoria Learning. All Rights Reserved. Made with <span>♥</span> by Iqra Javed</p>
-</footer>
 
-<script src="main.js"></script>
-</body>
-</html>
+
+
+
+
+
+<form id="grand-mock-test">
+
+
+
+
+
+<section class="quiz-card">
+
+
+<h2>
+Question 1
+</h2>
+
+<p>
+The particle with negative charge is:
+</p>
+
+
+<label class="option-label">
+<input type="radio" name="mq1" value="correct">
+Electron
+</label>
+
+
+<label class="option-label">
+<input type="radio" name="mq1" value="incorrect">
+Proton
+</label>
+
+
+<label class="option-label">
+<input type="radio" name="mq1" value="incorrect">
+Neutron
+</label>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="quiz-card">
+
+<h2>
+Question 2
+</h2>
+
+<p>
+Cathode rays are composed of:
+</p>
+
+
+<label class="option-label">
+<input type="radio" name="mq2" value="correct">
+Electrons
+</label>
+
+
+<label class="option-label">
+<input type="radio" name="mq2" value="incorrect">
+Neutrons
+</label>
+
+
+<label class="option-label">
+<input type="radio" name="mq2" value="incorrect">
+Alpha particles
+</label>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="quiz-card">
+
+<h2>
+Question 3
+</h2>
+
+
+<p>
+Neutron was discovered by:
+</p>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq3" value="correct">
+
+James Chadwick
+
+</label>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq3" value="incorrect">
+
+Bohr
+
+</label>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq3" value="incorrect">
+
+Dalton
+
+</label>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="quiz-card">
+
+<h2>
+Question 4
+</h2>
+
+
+<p>
+Rutherford experiment proved existence of:
+</p>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq4" value="correct">
+
+Nucleus
+
+</label>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq4" value="incorrect">
+
+Quantum numbers
+
+</label>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq4" value="incorrect">
+
+Neutron shells
+
+</label>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="quiz-card">
+
+<h2>
+Question 5
+</h2>
+
+
+<p>
+Bohr proposed electrons exist in:
+</p>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq5" value="correct">
+
+Fixed energy levels
+
+</label>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq5" value="incorrect">
+
+Random locations
+
+</label>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq5" value="incorrect">
+
+Nucleus only
+
+</label>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="quiz-card">
+
+<h2>
+Question 6
+</h2>
+
+
+<p>
+Planck theory introduced:
+</p>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq6" value="correct">
+
+Quantum energy packets
+
+</label>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq6" value="incorrect">
+
+Atomic mass units
+
+</label>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq6" value="incorrect">
+
+Canal rays
+
+</label>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="quiz-card">
+
+<h2>
+Question 7
+</h2>
+
+
+<p>
+Moseley's law is based on:
+</p>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq7" value="correct">
+
+Atomic number
+
+</label>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq7" value="incorrect">
+
+Atomic volume
+
+</label>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq7" value="incorrect">
+
+Neutron count
+
+</label>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="quiz-card">
+
+<h2>
+Question 8
+</h2>
+
+
+<p>
+Principal quantum number represents:
+</p>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq8" value="correct">
+
+Shell
+
+</label>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq8" value="incorrect">
+
+Electron charge
+
+</label>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq8" value="incorrect">
+
+Mass number
+
+</label>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="quiz-card">
+
+<h2>
+Question 9
+</h2>
+
+
+<p>
+Pauli exclusion principle states:
+</p>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq9" value="correct">
+
+No two electrons have identical quantum numbers
+
+</label>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq9" value="incorrect">
+
+All electrons pair immediately
+
+</label>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq9" value="incorrect">
+
+Orbitals have no energy
+
+</label>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="quiz-card">
+
+<h2>
+Question 10
+</h2>
+
+
+<p>
+Modern periodic table arrangement is according to:
+</p>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq10" value="correct">
+
+Atomic number
+
+</label>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq10" value="incorrect">
+
+Atomic radius
+
+</label>
+
+
+<label class="option-label">
+
+<input type="radio" name="mq10" value="incorrect">
+
+Density
+
+</label>
+
+
+</section>
+
+
